@@ -3,13 +3,13 @@
 //  Dayta
 //
 //  Created by Liam van Leynseele on 3/28/23.
-//
+
 
 import SwiftUI
 
 struct SurveyPage: View {
     @State var mainInput: Int = 4
-    var label: String = "Rate your day:"
+    var model: SurveyPageViewModel
     
     var pageLabel: String = "On the whole, how was your day"
     
@@ -17,31 +17,23 @@ struct SurveyPage: View {
     
     var body: some View {
         VStack{
-            Text(pageLabel)
+            Text(model.pageLabel)
             
             Section{
-                SliderInput(input: $mainInput, label: label)
+                if (model.mainPrompt is SliderViewModel){
+                    SliderInput(model: model.mainPrompt as! SliderViewModel)
+                }
+                else{
+                    LabeledToggle(model: model.mainPrompt as! LabeledToggleViewModel)
+                }
             }
             
-            
-            //will remove this at some point
-            let toggle = LabeledToggle(label: "Temp toggle label", input: $toggleInput)
-            
-            let morePrompts = [toggle]
-            
-            
-            if(!morePrompts.isEmpty) {
+            if(!model.morePrompts.morePrompts.isEmpty) {
                 Section{
-                    ExpandableMoreSection(prompts: morePrompts)
+                    ExpandableMoreSection(model: model.morePrompts)
                 }
             }
         }
 
-    }
-}
-
-struct SurveyPage_Previews: PreviewProvider {
-    static var previews: some View {
-        SurveyPage()
     }
 }

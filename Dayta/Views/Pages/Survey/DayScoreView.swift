@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct DayScoreView: View {
-    
-    @State var mainInput: Int = 4
-    var label: String = "Rate your day"
-    
     var id: String = UUID().uuidString
     var pageLabel: String = "On the whole, how was your day?"
     
@@ -23,7 +19,7 @@ struct DayScoreView: View {
         }
         
         Section{
-            SliderInput(input: $mainInput, label: label)
+            SliderInput(model: SliderViewModel(label: "Day Score", prompt: "Rate your day", maximumRating: 7))
         }
     }
 }

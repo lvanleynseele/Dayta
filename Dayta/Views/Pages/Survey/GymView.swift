@@ -13,26 +13,24 @@ struct GymView: View {
     var label: String = "Rate your productivity:"
     
     var pageLabel: String = "How productive was I today?"
-    
-    @State var legDayToggleInput: Bool = false
-    @State var armDayToggleInput: Bool = false
-    
-    
+
+
     var body: some View {
         Text(pageLabel)
             .foregroundColor(Color.blue)
             .font(.title2)
         
         Section {
-            LabeledToggle(label: "Did I go to the gym today?", input: $mainInput)
+            LabeledToggle(
+                model: LabeledToggleViewModel(label: "Gym", prompt: "Did I go to the gym today?"))
         }
         
-        let legDayToggle = LabeledToggle(label: "Did I commit code today?", input: $legDayToggleInput)
-        let armDayToggle = LabeledToggle(label: "Did I commit code today?", input: $armDayToggleInput)
-        
-        let morePrompts = [legDayToggle,armDayToggle]
+     
         Section {
-            ExpandableMoreSection(prompts: morePrompts)
+            ExpandableMoreSection(model: ExpandableMoreSectionViewModel(id: UUID().uuidString, morePrompts: [
+                LabeledToggleViewModel(label: "Leg Workout", prompt: "Did I do leg day?"),
+                LabeledToggleViewModel(label: "Arm Workout", prompt: "Did I do arm day?")
+            ]))
         }
     }
 }

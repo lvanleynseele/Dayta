@@ -9,9 +9,6 @@ import SwiftUI
 
 struct ProductivityScoreView: View {
     
-    @State var mainInput: Int = 4
-    var label: String = "Rate your productivity:"
-    
     var pageLabel: String = "How productive was I today?"
     
     @State var toggleInput: Bool = false
@@ -23,14 +20,11 @@ struct ProductivityScoreView: View {
             .font(.title2)
         
         Section{
-            SliderInput(input: $mainInput, label: label)
+            SliderInput(model: SliderViewModel(label: "Productivity", prompt: "Rate your productivity:", maximumRating: 5))
         }
         
-        let toggle = LabeledToggle(label: "Did I commit code today?", input: $toggleInput)
-        
-        let morePrompts = [toggle]
         Section{
-            ExpandableMoreSection(prompts: morePrompts)
+            ExpandableMoreSection(model: ExpandableMoreSectionViewModel(id: UUID().uuidString, morePrompts: [LabeledToggleViewModel(label: "Commit Code", prompt: "Did I commit code today?")]))
         }
     }
 }

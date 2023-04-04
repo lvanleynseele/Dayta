@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ExpandableMoreSection: View {
-    var prompts: [LabeledToggle]
+    var model: ExpandableMoreSectionViewModel
     @State private var collapsed: Bool = true
+    @State var opened: Bool = false
         
     var body: some View {
         VStack {
@@ -17,6 +18,10 @@ struct ExpandableMoreSection: View {
                 action: {
                     withAnimation(.spring()){
                         self.collapsed.toggle()
+                    }
+                    if (!opened) {
+                        opened = true
+                        model.opened = opened
                     }
                 },
                 label: {
@@ -32,8 +37,8 @@ struct ExpandableMoreSection: View {
             .buttonStyle(PlainButtonStyle())
             
             VStack {
-                ForEach(prompts, id: \.self.id) { _prompt in
-                    Toggle(_prompt.label, isOn: _prompt.$input).padding()
+                ForEach(model.morePrompts, id: \.self.id) { _prompt in
+                    LabeledToggle(model: _prompt.self)
                 }
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: collapsed ? 0 : .none)
@@ -45,8 +50,3 @@ struct ExpandableMoreSection: View {
 }
 
 
-struct ExpandableMoreSection_Previews: PreviewProvider {
-    static var previews: some View {
-        ExpandableMoreSection(prompts: [])
-    }
-}

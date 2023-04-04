@@ -8,5 +8,7 @@
 import Foundation
 
 protocol promptInputs {}
-extension SliderInput: promptInputs {}
-extension LabeledToggle: promptInputs {}
+//extension SliderInput: promptInputs {}
+//extension LabeledToggle: promptInputs {}
+extension SliderViewModel: promptInputs {}
+extension LabeledToggleViewModel: promptInputs {}

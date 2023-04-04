@@ -8,30 +8,25 @@
 import SwiftUI
 
 struct SliderInput: View {
-    var id: String = UUID().uuidString
-    @Binding var input: Int
-    var label: String
+    
+    @ObservedObject var model: SliderViewModel
+    @State var input: Int = 4
 
-    var maximumRating = 7
-
-    var offImage: Image?
-    var onImage = Image(systemName: "circle.fill")
-
-    var offColor = Color.gray
-    var onColor = Color.green
     var body: some View {
         VStack() {
-            if label.isEmpty == false {
-                Text(label).padding()
+            if model.label.isEmpty == false {
+                Text(model.label).padding()
             }
-
+            
+            
             HStack {
-                ForEach(1..<maximumRating + 1, id: \.self) { number in
+                ForEach(1..<model.maximumRating + 1, id: \.self) { number in
                     VStack{
                         image(for: number)
-                            .foregroundColor(number == input ? onColor(for: number) : offColor)
+                            .foregroundColor(number == input ? onColor(for: number) : model.offColor)
                             .onTapGesture {
                                 input = number
+                                model.inputState = input
                             }
                         
                         Text("\(number)")
@@ -45,14 +40,14 @@ struct SliderInput: View {
     
     func image(for number: Int) -> Image {
         if number > input {
-            return offImage ?? onImage
+            return model.offImage ?? model.onImage
         } else {
-            return onImage
+            return model.onImage
         }
     }
     
     func onColor(for number: Int) -> Color {
-        let colorSeparator: Int = maximumRating/3
+        let colorSeparator: Int = model.maximumRating/3
         
         if(number<=colorSeparator){
             return Color.red

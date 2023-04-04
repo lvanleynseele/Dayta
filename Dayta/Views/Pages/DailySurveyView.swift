@@ -23,25 +23,23 @@ struct DailySurveyView: View {
         VStack(alignment: .leading){
             //buttons for next prev
             HStack {
-                Button("< Previous") {
-                    if(index > 0){
+                if(index > 0){
+                    Button("< Previous") {
                         index -= 1
-                    }                }
-                .background(index>0 ? .blue : .gray)
-                .foregroundColor(index>0 ? .white : .black)
-                .clipShape(Capsule())
-                
+                    }
+                    .background(index>0 ? .blue : .gray)
+                    .foregroundColor(index>0 ? .white : .black)
+                    .clipShape(Capsule())
+                }
                 Spacer()
-                
-                Button("Next >") {
-                    if(index<numPages-1){
+                if(index<numPages-1){
+                    Button("Next >") {
                         index += 1
                     }
+                    .background(index<numPages-1 ? .blue : .gray)
+                    .foregroundColor(index<numPages-1 ? .white : .black)
+                    .clipShape(Capsule())
                 }
-                .background(index<numPages-1 ? .blue : .gray)
-                .foregroundColor(index<numPages-1 ? .white : .black)
-                .clipShape(Capsule())
-                
             }.buttonStyle(.borderedProminent)
                 .padding(.horizontal)
                 .frame(alignment: .top)

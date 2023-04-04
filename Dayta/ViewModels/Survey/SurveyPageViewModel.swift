@@ -8,10 +8,25 @@
 import Foundation
 import SwiftUI
 
-struct SurveyPageViewModel {
+class SurveyPageViewModel: ObservableObject {
     var id: String
     var pageLabel: String
     var mainPrompt: promptInputs
-    var morePrompts: [promptInputs]
+    var morePrompts: ExpandableMoreSectionViewModel
+    
+    
+//    @Published var mainInput: Int
+    @Published var morePromptsOpened: Bool
+    
+    init(id: String, pageLabel: String, mainPrompt: promptInputs, morePrompts: ExpandableMoreSectionViewModel) {
+        self.id = id
+        self.pageLabel = pageLabel
+        self.mainPrompt = mainPrompt
+        self.morePrompts = morePrompts
+        
+//        self.mainInput = 4
+        self.morePromptsOpened = false
+    }
+    
+    
 }
- 

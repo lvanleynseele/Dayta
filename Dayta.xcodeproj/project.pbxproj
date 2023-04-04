@@ -18,6 +18,9 @@
 		D6241DCC29D4D1580017587F /* SurveySheetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DCB29D4D1580017587F /* SurveySheetState.swift */; };
 		D6241DCE29D774610017587F /* SubmitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DCD29D774610017587F /* SubmitView.swift */; };
 		D6241DD029D785780017587F /* LabeledToggleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DCF29D785780017587F /* LabeledToggleViewModel.swift */; };
+		D6241DD429D789450017587F /* SliderInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DD329D789450017587F /* SliderInputViewModel.swift */; };
+		D6241DD629D7B0A70017587F /* ExpandableMoreSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DD529D7B0A70017587F /* ExpandableMoreSectionViewModel.swift */; };
+		D6241DDA29DCAB630017587F /* DailySurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DD929DCAB630017587F /* DailySurveyViewController.swift */; };
 		D632416D29CB7746002009C9 /* DaytaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632416C29CB7746002009C9 /* DaytaApp.swift */; };
 		D632416F29CB7746002009C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632416E29CB7746002009C9 /* ContentView.swift */; };
 		D632417129CB7747002009C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D632417029CB7747002009C9 /* Assets.xcassets */; };
@@ -72,6 +75,9 @@
 		D6241DCB29D4D1580017587F /* SurveySheetState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySheetState.swift; sourceTree = "<group>"; };
 		D6241DCD29D774610017587F /* SubmitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitView.swift; sourceTree = "<group>"; };
 		D6241DCF29D785780017587F /* LabeledToggleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledToggleViewModel.swift; sourceTree = "<group>"; };
+		D6241DD329D789450017587F /* SliderInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderInputViewModel.swift; sourceTree = "<group>"; };
+		D6241DD529D7B0A70017587F /* ExpandableMoreSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableMoreSectionViewModel.swift; sourceTree = "<group>"; };
+		D6241DD929DCAB630017587F /* DailySurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySurveyViewController.swift; sourceTree = "<group>"; };
 		D632416929CB7746002009C9 /* Dayta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dayta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D632416C29CB7746002009C9 /* DaytaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaytaApp.swift; sourceTree = "<group>"; };
 		D632416E29CB7746002009C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,7 +142,10 @@
 		D6241DB829D382070017587F /* Survey */ = {
 			isa = PBXGroup;
 			children = (
+				D6241DCF29D785780017587F /* LabeledToggleViewModel.swift */,
+				D6241DD329D789450017587F /* SliderInputViewModel.swift */,
 				D6241DBB29D382AF0017587F /* SurveyPageViewModel.swift */,
+				D6241DD529D7B0A70017587F /* ExpandableMoreSectionViewModel.swift */,
 			);
 			path = Survey;
 			sourceTree = "<group>";
@@ -159,6 +168,14 @@
 				D6241DCD29D774610017587F /* SubmitView.swift */,
 			);
 			path = Survey;
+			sourceTree = "<group>";
+		};
+		D6241DD129D788930017587F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6241DD929DCAB630017587F /* DailySurveyViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		D632416029CB7746002009C9 = {
@@ -184,6 +201,7 @@
 		D632416B29CB7746002009C9 /* Dayta */ = {
 			isa = PBXGroup;
 			children = (
+				D6241DD129D788930017587F /* Controllers */,
 				D6241DB329D37DE40017587F /* Methods */,
 				D6E0543E29CE287700078BEC /* Constants */,
 				D6E0543829CCC79800078BEC /* ViewModels */,
@@ -256,7 +274,6 @@
 				D6241DB829D382070017587F /* Survey */,
 				D6E0543929CCC7BD00078BEC /* UserViewModel.swift */,
 				D63241A229CB8791002009C9 /* SideMenuViewModel.swift */,
-				D6241DCF29D785780017587F /* LabeledToggleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -444,12 +461,15 @@
 				D6241DB229D371FB0017587F /* SurveyPage.swift in Sources */,
 				D632419F29CB875B002009C9 /* SideMenuHeaderView.swift in Sources */,
 				D6E0543D29CCCB6400078BEC /* LoginView.swift in Sources */,
+				D6241DDA29DCAB630017587F /* DailySurveyViewController.swift in Sources */,
 				D6E0544729CE484500078BEC /* ExpandableMoreSection.swift in Sources */,
 				D6E0544029CE288700078BEC /* UserConstants.swift in Sources */,
 				D632416D29CB7746002009C9 /* DaytaApp.swift in Sources */,
 				D6E0543029CCBF6700078BEC /* ProfileView.swift in Sources */,
 				D6241DB529D37E040017587F /* CaseIterableExtension.swift in Sources */,
 				D6241DC429D39B980017587F /* DayScoreView.swift in Sources */,
+				D6241DD429D789450017587F /* SliderInputViewModel.swift in Sources */,
+				D6241DD629D7B0A70017587F /* ExpandableMoreSectionViewModel.swift in Sources */,
 				D6E0543A29CCC7BD00078BEC /* UserViewModel.swift in Sources */,
 				D6E0543429CCC0D100078BEC /* EditSurveyView.swift in Sources */,
 				D632419A29CB7F13002009C9 /* BlueButton.swift in Sources */,

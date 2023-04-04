@@ -6,23 +6,17 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct LabeledToggle: View {
-    var id: String = UUID().uuidString
-    var label: String
-    @Binding var input: Bool
-    //@Published var output: Bool
-    
+    @ObservedObject var model: LabeledToggleViewModel
+    @State var input: Bool = false
     
     var body: some View {
-        Toggle(label, isOn: $input).padding()
+        Toggle(model.prompt, isOn: $input)
+            .padding()
+            .onChange(of: input) { newState in
+                model.inputState = newState
+            }
     }
-}
-
-
-class LabeledToggleOutput: ObservableObject {
-    
-    @Published var output: Bool = false
-    
-    
 }
