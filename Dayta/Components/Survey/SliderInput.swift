@@ -11,6 +11,11 @@ struct SliderInput: View {
     
     @ObservedObject var model: SliderViewModel
     @State var input: Int = 4
+    
+    let offImage: Image? = nil
+    let onImage = Image(systemName: "circle.fill")
+    let offColor = Color.gray
+    
 
     var body: some View {
         VStack() {
@@ -23,7 +28,7 @@ struct SliderInput: View {
                 ForEach(1..<model.maximumRating + 1, id: \.self) { number in
                     VStack{
                         image(for: number)
-                            .foregroundColor(number == input ? onColor(for: number) : model.offColor)
+                            .foregroundColor(number == input ? onColor(for: number) : offColor)
                             .onTapGesture {
                                 input = number
                                 model.inputState = input
@@ -40,9 +45,9 @@ struct SliderInput: View {
     
     func image(for number: Int) -> Image {
         if number > input {
-            return model.offImage ?? model.onImage
+            return offImage ?? onImage
         } else {
-            return model.onImage
+            return onImage
         }
     }
     

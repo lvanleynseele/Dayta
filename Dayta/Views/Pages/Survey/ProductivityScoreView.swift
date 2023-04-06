@@ -20,11 +20,11 @@ struct ProductivityScoreView: View {
             .font(.title2)
         
         Section{
-            SliderInput(model: SliderViewModel(label: "Productivity", prompt: "Rate your productivity:", maximumRating: 5))
+            SliderInput(model: SliderViewModel(id: UUID().uuidString, label: "Productivity", prompt: "Rate your productivity:", maximumRating: 5))
         }
         
         Section{
-            ExpandableMoreSection(model: ExpandableMoreSectionViewModel(id: UUID().uuidString, morePrompts: [LabeledToggleViewModel(label: "Commit Code", prompt: "Did I commit code today?")]))
+            ExpandableMoreSection(model: ExpandableMoreSectionViewModel(id: UUID().uuidString, morePrompts: [LabeledToggleViewModel(id: UUID().uuidString, label: "Commit Code", prompt: "Did I commit code today?")]))
         }
     }
 }

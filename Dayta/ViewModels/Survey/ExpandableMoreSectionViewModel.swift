@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
 
 
-class ExpandableMoreSectionViewModel: ObservableObject {
+class ExpandableMoreSectionViewModel: ObservableObject, Decodable {
     
     var id: String
     @Published var morePrompts: [LabeledToggleViewModel]
@@ -20,4 +21,15 @@ class ExpandableMoreSectionViewModel: ObservableObject {
         self.opened = false
     }
     
+    private enum codingKey: String, CodingKey {
+        case id
+        case morePrompts
+    }
+    
+    required init(from decoder:Decoder) throws {
+        let values = try decoder.container(keyedBy: codingKey.self)
+        id = try values.decode(String.self, forKey: .id)
+        morePrompts = try values.decode([LabeledToggleViewModel].self, forKey: .morePrompts)
+        opened = false
+    }
 }

@@ -22,14 +22,14 @@ struct GymView: View {
         
         Section {
             LabeledToggle(
-                model: LabeledToggleViewModel(label: "Gym", prompt: "Did I go to the gym today?"))
+                model: LabeledToggleViewModel(id: UUID().uuidString, label: "Gym", prompt: "Did I go to the gym today?"))
         }
         
      
         Section {
             ExpandableMoreSection(model: ExpandableMoreSectionViewModel(id: UUID().uuidString, morePrompts: [
-                LabeledToggleViewModel(label: "Leg Workout", prompt: "Did I do leg day?"),
-                LabeledToggleViewModel(label: "Arm Workout", prompt: "Did I do arm day?")
+                LabeledToggleViewModel(id: UUID().uuidString, label: "Leg Workout", prompt: "Did I do leg day?"),
+                LabeledToggleViewModel(id: UUID().uuidString, label: "Arm Workout", prompt: "Did I do arm day?")
             ]))
         }
     }

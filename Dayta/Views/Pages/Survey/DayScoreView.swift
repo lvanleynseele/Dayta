@@ -19,7 +19,7 @@ struct DayScoreView: View {
         }
         
         Section{
-            SliderInput(model: SliderViewModel(label: "Day Score", prompt: "Rate your day", maximumRating: 7))
+            SliderInput(model: SliderViewModel(id: UUID().uuidString, label: "Day Score", prompt: "Rate your day", maximumRating: 7))
         }
     }
 }

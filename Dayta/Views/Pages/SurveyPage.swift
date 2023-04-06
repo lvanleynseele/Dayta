@@ -8,29 +8,26 @@
 import SwiftUI
 
 struct SurveyPage: View {
-    @State var mainInput: Int = 4
     var model: SurveyPageViewModel
-    
-    var pageLabel: String = "On the whole, how was your day"
-    
-    @State var toggleInput: Bool = false
     
     var body: some View {
         VStack{
             Text(model.pageLabel)
+                .foregroundColor(Color.blue)
+                .font(.title2)
             
-            Section{
-                if (model.mainPrompt is SliderViewModel){
-                    SliderInput(model: model.mainPrompt as! SliderViewModel)
+            Section {
+                if (model.mainSlider != nil){
+                    SliderInput(model: model.mainSlider!)
                 }
                 else{
-                    LabeledToggle(model: model.mainPrompt as! LabeledToggleViewModel)
+                    LabeledToggle(model: model.mainToggle!)
                 }
             }
             
-            if(!model.morePrompts.morePrompts.isEmpty) {
-                Section{
-                    ExpandableMoreSection(model: model.morePrompts)
+            if(model.morePrompts != nil) {
+                Section {
+                    ExpandableMoreSection(model: model.morePrompts!)
                 }
             }
         }

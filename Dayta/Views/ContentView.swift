@@ -11,6 +11,8 @@ struct ContentView: View {
     @State private var isSideMenuShowing = false
     @State public var user: UserViewModel = UserViewModel.Liam //UserViewModel.empty
     
+    @EnvironmentObject var dailySurveyPages: ModelData
+    
     var body: some View {
         if !user.isLoggedIn {
             LoginView(user: $user)
@@ -26,7 +28,9 @@ struct ContentView: View {
                 }
                 ZStack {
                     Color(.white)
-                    NavigationLink(destination: DailySurveyView()){
+                    NavigationLink(destination: DailySurveyView(pages: dailySurveyPages.surveyPages.map({ model in
+                        SurveyPage(model: model)
+                    }))){
                         Text("Take your daily survey")
                     }.buttonStyle(BlueButton())
                 }

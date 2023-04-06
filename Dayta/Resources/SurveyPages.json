@@ -1,0 +1,39 @@
+[
+    {
+        "id": "2774ca86-e6df-42a3-938e-d1503e38af72",
+        "pageLabel":"Day Score",
+        "pagePrompt": "How was your day?",
+        "mainSlider": {
+            "id": "1f1436e7-6162-4bfe-bd74-8ebefbe63971",
+            "label": "Day Score",
+            "prompt": "Rate your day",
+            "maximumRating": 7
+        }
+    },
+    {
+        "id": "91935111-358d-46cd-a51d-4e3e0fe929b3",
+        "pageLabel":"Productivity",
+        "pagePrompt": "How productive were you today?",
+        "mainSlider": {
+            "id": "1ace357e-1b20-4cad-ae87-8fe65bc82904",
+            "label": "Productivity Score",
+            "prompt": "Rate your productivity",
+            "maximumRating": 5
+        },
+        "morePrompts": {
+            "id": "2838c3a9-91f6-41f2-8516-c3b2c673ab35",
+            "morePrompts":
+                [
+                    {
+                        "id": "559d53cc-80c1-4e2b-9d67-c79bbce7dee1",
+                        "label": "Commited Code",
+                        "prompt": "Did you commit code today?"
+                    }
+                ]
+        }
+    },
+    
+
+
+
+]

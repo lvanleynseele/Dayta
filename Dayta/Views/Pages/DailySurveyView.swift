@@ -7,72 +7,30 @@
 
 import SwiftUI
 
-struct DailySurveyView: View {
-    //@State var morePrompts: [LabeledToggle]
-    @State var isShowingSheet = false
+struct DailySurveyView<Page: View>: View {
+    var pages: [Page]
     
-    @State var currentPage: any View = DayScoreView()
+    
+    @State var isShowingSheet = false
+    @State var currentPage: Int = 0
     
     @State var index = 0
     let numPages = SurveyPageState.allCases.count
     
-    
-    
     var body: some View {
-    
+        
+        
+        
         VStack(alignment: .leading){
             //buttons for next prev
-            HStack {
-                if(index > 0){
-                    Button("< Previous") {
-                        index -= 1
-                    }
-                    .background(index>0 ? .blue : .gray)
-                    .foregroundColor(index>0 ? .white : .black)
-                    .clipShape(Capsule())
-                }
-                Spacer()
-                if(index<numPages-1){
-                    Button("Next >") {
-                        index += 1
-                    }
-                    .background(index<numPages-1 ? .blue : .gray)
-                    .foregroundColor(index<numPages-1 ? .white : .black)
-                    .clipShape(Capsule())
-                }
-            }.buttonStyle(.borderedProminent)
-                .padding(.horizontal)
-                .frame(alignment: .top)
-        
-            
-        }
-    
-        Spacer()
-        
-        VStack(alignment: .center){
-            getPage
-                .frame(alignment: .center)
-        }
-    }
-    
-    
-    @ViewBuilder private var getPage: some View {
-
-        switch index{
-            case 0:
-                DayScoreView()
-            case 1:
-                ProductivityScoreView()
-            case 2:
-                GymView()
-            case 3:
-                SubmitView()
-            default:
-                EmptyView()
-                
+            DailySurveyViewController(pages: pages, currentPage: $currentPage)
+            PageControl(numberOfPages: pages.count, currentPage: $currentPage)
+                .frame(width: CGFloat(pages.count * 18))
+                .padding(.trailing)
         }
     }
 }
+    
 
 struct SurveyContent<Content:View>: View {
     
