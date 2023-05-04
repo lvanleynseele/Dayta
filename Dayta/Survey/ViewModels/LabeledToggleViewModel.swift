@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LabeledToggleViewModel: ObservableObject, Identifiable, Decodable {
+class LabeledToggleViewModel: ObservableObject, Identifiable, Codable {
     var id: String
     var label: String
     var prompt: String
@@ -20,17 +20,25 @@ class LabeledToggleViewModel: ObservableObject, Identifiable, Decodable {
         self.inputState = false
     }
     
-    private enum codingKey: String, CodingKey {
+    private enum codingKeys: String, CodingKey {
         case id
         case label
         case prompt
+        case inputState
     }
     
     required init(from decoder:Decoder) throws {
-        let values = try decoder.container(keyedBy: codingKey.self)
+        let values = try decoder.container(keyedBy: codingKeys.self)
         id = try values.decode(String.self, forKey: .id)
         label = try values.decode(String.self, forKey: .label)
         prompt = try values.decode(String.self, forKey: .prompt)
     }
     
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: codingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(label, forKey: .label)
+        try container.encode(prompt, forKey: .prompt)
+        try container.encode(inputState, forKey: .inputState)
+    }
 }

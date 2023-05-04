@@ -7,7 +7,8 @@
             "id": "1f1436e7-6162-4bfe-bd74-8ebefbe63971",
             "label": "Day Score",
             "prompt": "Rate your day",
-            "maximumRating": 7
+            "maximumRating": 7,
+            "inputState": -1
         }
     },
     {
@@ -18,7 +19,8 @@
             "id": "1ace357e-1b20-4cad-ae87-8fe65bc82904",
             "label": "Productivity Score",
             "prompt": "Rate your productivity",
-            "maximumRating": 5
+            "maximumRating": 5,
+            "inputState": -1
         },
         "morePrompts": {
             "id": "2838c3a9-91f6-41f2-8516-c3b2c673ab35",
@@ -29,6 +31,37 @@
                         "label": "Commited Code",
                         "prompt": "Did you commit code today?"
                     }
+                ]
+        }
+    },
+    {
+        "id": "aa62b862-d810-11ed-afa1-0242ac120002",
+        "pageLabel":"Gym",
+        "pagePrompt": "Did you get excercise today?",
+        "mainToggle": {
+            "id": "aa62bccc-d810-11ed-afa1-0242ac120002",
+            "label": "Gym",
+            "prompt": "Did you go to the gym?",
+        },
+        "morePrompts": {
+            "id": "2838c3a9-91f6-41f2-8516-c3b2c673ab35",
+            "morePrompts":
+                [
+                    {
+                        "id": "aa62bf42-d810-11ed-afa1-0242ac120002",
+                        "label": "Leg Day",
+                        "prompt": "Did you do leg day"
+                    },
+                    {
+                        "id": "aa62c29e-d810-11ed-afa1-0242ac120006",
+                        "label": "Arm Day",
+                        "prompt": "Did you do arm day?"
+                    },
+                    {
+                        "id": "aa62c29e-d810-11ed-afa1-0242ac120004",
+                        "label": "Soccer",
+                        "prompt": "Did you play soccer?"
+                    },
                 ]
         }
     },

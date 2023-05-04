@@ -18,10 +18,10 @@ struct ExpandableMoreSection: View {
                 action: {
                     withAnimation(.spring()){
                         self.collapsed.toggle()
-                    }
-                    if (!opened) {
-                        opened = true
-                        model.opened = opened
+                        if (!opened) {
+                            opened = true
+                            model.opened = opened
+                        }
                     }
                 },
                 label: {

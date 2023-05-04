@@ -4,12 +4,15 @@
 //
 //  Created by Liam van Leynseele on 4/4/23.
 //
+//apple tutorial:
+//https://developer.apple.com/tutorials/swiftui/interfacing-with-uikit
+//
 
 import Foundation
 import SwiftUI
 import UIKit
 
-struct DailySurveyViewController<Page: View>: UIViewControllerRepresentable {
+struct PageViewController<Page: View>: UIViewControllerRepresentable {
     var pages: [Page]
     @Binding var currentPage: Int
 
@@ -23,7 +26,7 @@ struct DailySurveyViewController<Page: View>: UIViewControllerRepresentable {
             navigationOrientation: .horizontal)
         pageViewController.dataSource = context.coordinator
         pageViewController.delegate = context.coordinator
-
+        
         return pageViewController
     }
 
@@ -31,14 +34,18 @@ struct DailySurveyViewController<Page: View>: UIViewControllerRepresentable {
         pageViewController.setViewControllers(
             [context.coordinator.controllers[currentPage]], direction: .forward, animated: true)
     }
-
+    
+    
+    
     class Coordinator: NSObject, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
-        var parent: DailySurveyViewController
+        var parent: PageViewController
         var controllers = [UIViewController]()
 
-        init(_ pageViewController: DailySurveyViewController) {
+        init(_ pageViewController: PageViewController) {
             parent = pageViewController
-            controllers = parent.pages.map { UIHostingController(rootView: $0) }
+            controllers = parent.pages.map { UIHostingController(rootView: $0) } // set this to a sruveypage controller?
+            
+            print(parent.pages[0].self)
         }
 
         func pageViewController(

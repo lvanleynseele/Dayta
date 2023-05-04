@@ -40,16 +40,16 @@ enum SideMenuViewModel: Int, CaseIterable {
         }
     }
     
-    var view: AnyView {
-        switch self {
-            case .profile:
-                return AnyView(ProfileView())
-            case .analytics:
-                return AnyView(AnalyticsView())
-            case .editSurvey:
-                return AnyView(EditSurveyView())
-            case .helpPage:
-                return AnyView(HelpView())
-        }
-    }
+//    var view: AnyView {
+//        switch self {
+//            case .profile:
+//                return AnyView(ProfileView())
+//            case .analytics:
+//                return AnyView(AnalyticsView())
+//            case .editSurvey:
+//                return AnyView(EditSurveyView())
+//            case .helpPage:
+//                return AnyView(HelpView())
+//        }
+//    }
 }

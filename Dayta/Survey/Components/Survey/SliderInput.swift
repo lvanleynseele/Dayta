@@ -10,7 +10,7 @@ import SwiftUI
 struct SliderInput: View {
     
     @ObservedObject var model: SliderViewModel
-    @State var input: Int = 4
+    @State var input: Int = -1
     
     let offImage: Image? = nil
     let onImage = Image(systemName: "circle.fill")
@@ -41,7 +41,6 @@ struct SliderInput: View {
             }.scaledToFit()
         }
     }
-    
     
     func image(for number: Int) -> Image {
         if number > input {

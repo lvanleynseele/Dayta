@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var isSideMenuShowing = false
     @State public var user: UserViewModel = UserViewModel.Liam //UserViewModel.empty
     
-    @EnvironmentObject var dailySurveyPages: ModelData
+    @EnvironmentObject var modelData: ModelData
     
     var body: some View {
         if !user.isLoggedIn {
@@ -24,11 +24,11 @@ struct ContentView: View {
                                endPoint: .bottom)
                 .ignoresSafeArea()
                 if isSideMenuShowing {
-                    SideMenuView(isSideMenuShowing: $isSideMenuShowing)
+                    SideMenuView(isSideMenuShowing: $isSideMenuShowing, profile: $modelData.profile, surveyData: modelData.surveyData)
                 }
                 ZStack {
                     Color(.white)
-                    NavigationLink(destination: DailySurveyView(pages: dailySurveyPages.surveyPages.map({ model in
+                    NavigationLink(destination: DailySurveyView(pages: modelData.surveyPages.map({ model in
                         SurveyPage(model: model)
                     }))){
                         Text("Take your daily survey")

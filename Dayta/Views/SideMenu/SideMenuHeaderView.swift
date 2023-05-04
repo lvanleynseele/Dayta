@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SideMenuHeaderView: View {
     @Binding var isSideMenuShowing: Bool
+    @Binding var profile: UserViewModel
     
     var body: some View {
         ZStack (alignment: .topTrailing) {
@@ -25,7 +26,7 @@ struct SideMenuHeaderView: View {
                 }
             )
             
-            LoggedInUser()
+            LoggedInUser(profile: $profile)
         }
         
         //need to get app context for user status
@@ -34,6 +35,7 @@ struct SideMenuHeaderView: View {
 
 
 struct LoggedInUser: View {
+    @Binding var profile: UserViewModel
     var body: some View {
         
         //wrap this in nav link to profile page
@@ -41,7 +43,7 @@ struct LoggedInUser: View {
             //This is for header of side menu, should be either user iniitals or photo if account exists, otherwise prompt to make profile
             NoPhotoIcon()
             
-            Text("Liam van Leynseele")
+            Text("\(profile.firstName) \(profile.lastName)")
                 .font(.system(size: 24, weight: .semibold))
                 .foregroundColor(.white)
             
@@ -87,6 +89,6 @@ struct NoPhotoIcon: View {
 
 struct SideMenuHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        SideMenuHeaderView(isSideMenuShowing: .constant(true))
+        SideMenuHeaderView(isSideMenuShowing: .constant(true), profile: .constant(UserViewModel.Liam))
     }
 }

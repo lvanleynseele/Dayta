@@ -14,6 +14,7 @@ struct UserViewModel {
     var userName: String
     var firstName: String
     var lastName: String
+//    var homeTown: NSTextLocation // use to track behavior when traveling?
     //var birthDate: Date
     //var notificationTime: Time
     var createdDate: Date

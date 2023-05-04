@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6053DCA29F1B165003B48E9 /* SurveyResultsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6053DC929F1B165003B48E9 /* SurveyResultsExample.swift */; };
 		D6241DB229D371FB0017587F /* SurveyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DB129D371FB0017587F /* SurveyPage.swift */; };
 		D6241DB529D37E040017587F /* CaseIterableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DB429D37E040017587F /* CaseIterableExtension.swift */; };
 		D6241DBC29D382AF0017587F /* SurveyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DBB29D382AF0017587F /* SurveyPageViewModel.swift */; };
@@ -15,15 +16,19 @@
 		D6241DC429D39B980017587F /* DayScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DC329D39B980017587F /* DayScoreView.swift */; };
 		D6241DC629D4B6C70017587F /* ProductivityScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DC529D4B6C70017587F /* ProductivityScoreView.swift */; };
 		D6241DC829D4B93F0017587F /* GymView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DC729D4B93F0017587F /* GymView.swift */; };
-		D6241DCC29D4D1580017587F /* SurveySheetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DCB29D4D1580017587F /* SurveySheetState.swift */; };
 		D6241DCE29D774610017587F /* SubmitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DCD29D774610017587F /* SubmitView.swift */; };
 		D6241DD029D785780017587F /* LabeledToggleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DCF29D785780017587F /* LabeledToggleViewModel.swift */; };
 		D6241DD429D789450017587F /* SliderInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DD329D789450017587F /* SliderInputViewModel.swift */; };
 		D6241DD629D7B0A70017587F /* ExpandableMoreSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DD529D7B0A70017587F /* ExpandableMoreSectionViewModel.swift */; };
-		D6241DDA29DCAB630017587F /* DailySurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DD929DCAB630017587F /* DailySurveyViewController.swift */; };
+		D6241DDA29DCAB630017587F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DD929DCAB630017587F /* PageViewController.swift */; };
 		D6241DDC29DCC0960017587F /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DDB29DCC0960017587F /* PageControl.swift */; };
 		D6241DE129DCE2A60017587F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DE029DCE2A60017587F /* ModelData.swift */; };
 		D627F0C029DE38E20033789F /* SurveyPages.json in Resources */ = {isa = PBXBuildFile; fileRef = D627F0BF29DE38E20033789F /* SurveyPages.json */; };
+		D627F0C429E0963D0033789F /* SubmitControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D627F0C329E0963D0033789F /* SubmitControl.swift */; };
+		D627F0CA29E5F7C10033789F /* SurveySubmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D627F0C929E5F7C10033789F /* SurveySubmittedView.swift */; };
+		D627F0CD29EE16FA0033789F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D627F0CB29EE16FA0033789F /* Model.xcdatamodeld */; };
+		D627F0D129EF16A50033789F /* DailySurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D627F0D029EF16A50033789F /* DailySurveyViewModel.swift */; };
+		D627F0D329EF22EC0033789F /* SurveyResults.json in Resources */ = {isa = PBXBuildFile; fileRef = D627F0D229EF22EC0033789F /* SurveyResults.json */; };
 		D632416D29CB7746002009C9 /* DaytaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632416C29CB7746002009C9 /* DaytaApp.swift */; };
 		D632416F29CB7746002009C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632416E29CB7746002009C9 /* ContentView.swift */; };
 		D632417129CB7747002009C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D632417029CB7747002009C9 /* Assets.xcassets */; };
@@ -37,6 +42,10 @@
 		D632419F29CB875B002009C9 /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632419E29CB875B002009C9 /* SideMenuHeaderView.swift */; };
 		D63241A129CB8773002009C9 /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63241A029CB8773002009C9 /* SideMenuOptionView.swift */; };
 		D63241A329CB8791002009C9 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63241A229CB8791002009C9 /* SideMenuViewModel.swift */; };
+		D650E68229F1BE8A00F5AB80 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650E68129F1BE8A00F5AB80 /* DateFormat.swift */; };
+		D650E68829F83FFE00F5AB80 /* DayScoreAnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650E68729F83FFE00F5AB80 /* DayScoreAnalyticsView.swift */; };
+		D650E68A29F8442A00F5AB80 /* SurveyPageAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650E68929F8442A00F5AB80 /* SurveyPageAnalysisView.swift */; };
+		D650E68C29F8471000F5AB80 /* SurveyPageAnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650E68B29F8471000F5AB80 /* SurveyPageAnalyticsViewModel.swift */; };
 		D6E0543029CCBF6700078BEC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0542F29CCBF6700078BEC /* ProfileView.swift */; };
 		D6E0543229CCBF8500078BEC /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0543129CCBF8500078BEC /* AnalyticsView.swift */; };
 		D6E0543429CCC0D100078BEC /* EditSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0543329CCC0D100078BEC /* EditSurveyView.swift */; };
@@ -67,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D6053DC929F1B165003B48E9 /* SurveyResultsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultsExample.swift; sourceTree = "<group>"; };
 		D6241DB129D371FB0017587F /* SurveyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPage.swift; sourceTree = "<group>"; };
 		D6241DB429D37E040017587F /* CaseIterableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterableExtension.swift; sourceTree = "<group>"; };
 		D6241DBB29D382AF0017587F /* SurveyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPageViewModel.swift; sourceTree = "<group>"; };
@@ -75,15 +85,20 @@
 		D6241DC329D39B980017587F /* DayScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayScoreView.swift; sourceTree = "<group>"; };
 		D6241DC529D4B6C70017587F /* ProductivityScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityScoreView.swift; sourceTree = "<group>"; };
 		D6241DC729D4B93F0017587F /* GymView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymView.swift; sourceTree = "<group>"; };
-		D6241DCB29D4D1580017587F /* SurveySheetState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySheetState.swift; sourceTree = "<group>"; };
 		D6241DCD29D774610017587F /* SubmitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitView.swift; sourceTree = "<group>"; };
 		D6241DCF29D785780017587F /* LabeledToggleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledToggleViewModel.swift; sourceTree = "<group>"; };
 		D6241DD329D789450017587F /* SliderInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderInputViewModel.swift; sourceTree = "<group>"; };
 		D6241DD529D7B0A70017587F /* ExpandableMoreSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableMoreSectionViewModel.swift; sourceTree = "<group>"; };
-		D6241DD929DCAB630017587F /* DailySurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySurveyViewController.swift; sourceTree = "<group>"; };
+		D6241DD929DCAB630017587F /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		D6241DDB29DCC0960017587F /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		D6241DE029DCE2A60017587F /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		D627F0BF29DE38E20033789F /* SurveyPages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SurveyPages.json; sourceTree = "<group>"; };
+		D627F0C329E0963D0033789F /* SubmitControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitControl.swift; sourceTree = "<group>"; };
+		D627F0C929E5F7C10033789F /* SurveySubmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySubmittedView.swift; sourceTree = "<group>"; };
+		D627F0CC29EE16FA0033789F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D627F0CE29EE17BB0033789F /* Dayta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dayta.entitlements; sourceTree = "<group>"; };
+		D627F0D029EF16A50033789F /* DailySurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySurveyViewModel.swift; sourceTree = "<group>"; };
+		D627F0D229EF22EC0033789F /* SurveyResults.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SurveyResults.json; sourceTree = "<group>"; };
 		D632416929CB7746002009C9 /* Dayta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dayta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D632416C29CB7746002009C9 /* DaytaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaytaApp.swift; sourceTree = "<group>"; };
 		D632416E29CB7746002009C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +115,10 @@
 		D632419E29CB875B002009C9 /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
 		D63241A029CB8773002009C9 /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
 		D63241A229CB8791002009C9 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		D650E68129F1BE8A00F5AB80 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		D650E68729F83FFE00F5AB80 /* DayScoreAnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayScoreAnalyticsView.swift; sourceTree = "<group>"; };
+		D650E68929F8442A00F5AB80 /* SurveyPageAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPageAnalysisView.swift; sourceTree = "<group>"; };
+		D650E68B29F8471000F5AB80 /* SurveyPageAnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPageAnalyticsViewModel.swift; sourceTree = "<group>"; };
 		D6E0542F29CCBF6700078BEC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D6E0543129CCBF8500078BEC /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
 		D6E0543329CCC0D100078BEC /* EditSurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSurveyView.swift; sourceTree = "<group>"; };
@@ -137,6 +156,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6053DC329F1A417003B48E9 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				D6053DC729F1A4FA003B48E9 /* Controllers */,
+				D6053DC429F1A4AA003B48E9 /* Components */,
+				D6053DC629F1A4E7003B48E9 /* ViewModels */,
+				D6053DC529F1A4BD003B48E9 /* Views */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		D6053DC429F1A4AA003B48E9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D6053DC529F1A4BD003B48E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6053DC829F1A524003B48E9 /* Pages */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D6053DC629F1A4E7003B48E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D650E68B29F8471000F5AB80 /* SurveyPageAnalyticsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D6053DC729F1A4FA003B48E9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D6053DC829F1A524003B48E9 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				D6E0543129CCBF8500078BEC /* AnalyticsView.swift */,
+				D650E68729F83FFE00F5AB80 /* DayScoreAnalyticsView.swift */,
+				D650E68929F8442A00F5AB80 /* SurveyPageAnalysisView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		D6241DB329D37DE40017587F /* Methods */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,15 +215,16 @@
 			path = Methods;
 			sourceTree = "<group>";
 		};
-		D6241DB829D382070017587F /* Survey */ = {
+		D6241DB829D382070017587F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				D6241DCF29D785780017587F /* LabeledToggleViewModel.swift */,
 				D6241DD329D789450017587F /* SliderInputViewModel.swift */,
 				D6241DBB29D382AF0017587F /* SurveyPageViewModel.swift */,
 				D6241DD529D7B0A70017587F /* ExpandableMoreSectionViewModel.swift */,
+				D627F0D029EF16A50033789F /* DailySurveyViewModel.swift */,
 			);
-			path = Survey;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D6241DBF29D3892F0017587F /* TypeProtocols */ = {
@@ -172,6 +243,7 @@
 				D6241DC529D4B6C70017587F /* ProductivityScoreView.swift */,
 				D6241DC729D4B93F0017587F /* GymView.swift */,
 				D6241DCD29D774610017587F /* SubmitView.swift */,
+				D627F0C929E5F7C10033789F /* SurveySubmittedView.swift */,
 			);
 			path = Survey;
 			sourceTree = "<group>";
@@ -179,8 +251,7 @@
 		D6241DD129D788930017587F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D6241DD929DCAB630017587F /* DailySurveyViewController.swift */,
-				D6241DDB29DCC0960017587F /* PageControl.swift */,
+				D627F0C329E0963D0033789F /* SubmitControl.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,13 +260,53 @@
 			isa = PBXGroup;
 			children = (
 				D627F0BF29DE38E20033789F /* SurveyPages.json */,
+				D627F0D229EF22EC0033789F /* SurveyResults.json */,
+				D6053DC929F1B165003B48E9 /* SurveyResultsExample.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D627F0D629F0A2DC0033789F /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				D6241DD129D788930017587F /* Controllers */,
+				D627F0D929F0A4030033789F /* Components */,
+				D627F0D829F0A3C20033789F /* Views */,
+				D6241DB829D382070017587F /* ViewModels */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		D627F0D829F0A3C20033789F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6241DC229D39B5A0017587F /* Survey */,
+				D632419629CB7D9C002009C9 /* DailySurveyView.swift */,
+				D6241DB129D371FB0017587F /* SurveyPage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D627F0D929F0A4030033789F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D6E0544129CE2DDC00078BEC /* Survey */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D627F0DA29F0A45D0033789F /* ModelData */ = {
+			isa = PBXGroup;
+			children = (
+				D6241DE029DCE2A60017587F /* ModelData.swift */,
+			);
+			path = ModelData;
 			sourceTree = "<group>";
 		};
 		D632416029CB7746002009C9 = {
 			isa = PBXGroup;
 			children = (
+				D627F0CB29EE16FA0033789F /* Model.xcdatamodeld */,
 				D632416B29CB7746002009C9 /* Dayta */,
 				D632417C29CB7747002009C9 /* DaytaTests */,
 				D632418629CB7747002009C9 /* DaytaUITests */,
@@ -216,15 +327,20 @@
 		D632416B29CB7746002009C9 /* Dayta */ = {
 			isa = PBXGroup;
 			children = (
+				D650E68329F72AD500F5AB80 /* PageControl */,
+				D627F0CE29EE17BB0033789F /* Dayta.entitlements */,
 				D632416C29CB7746002009C9 /* DaytaApp.swift */,
+				D632416E29CB7746002009C9 /* ContentView.swift */,
+				D627F0DA29F0A45D0033789F /* ModelData */,
 				D6241DDE29DCD8B60017587F /* Resources */,
-				D6241DD129D788930017587F /* Controllers */,
 				D6241DB329D37DE40017587F /* Methods */,
 				D6E0543E29CE287700078BEC /* Constants */,
 				D6E0543829CCC79800078BEC /* ViewModels */,
 				D6E0542E29CCBF3100078BEC /* Views */,
 				D632419829CB7EEB002009C9 /* Components */,
 				D632417029CB7747002009C9 /* Assets.xcassets */,
+				D6053DC329F1A417003B48E9 /* Analytics */,
+				D627F0D629F0A2DC0033789F /* Survey */,
 				D632417229CB7747002009C9 /* Preview Content */,
 			);
 			path = Dayta;
@@ -258,7 +374,6 @@
 		D632419829CB7EEB002009C9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D6E0544129CE2DDC00078BEC /* Survey */,
 				D632419929CB7F13002009C9 /* BlueButton.swift */,
 			);
 			path = Components;
@@ -274,10 +389,26 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
+		D650E68329F72AD500F5AB80 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				D650E68429F72AE400F5AB80 /* Controllers */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		D650E68429F72AE400F5AB80 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6241DD929DCAB630017587F /* PageViewController.swift */,
+				D6241DDB29DCC0960017587F /* PageControl.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		D6E0542E29CCBF3100078BEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D632416E29CB7746002009C9 /* ContentView.swift */,
 				D6E0543B29CCCB3D00078BEC /* Pages */,
 				D632419B29CB870A002009C9 /* SideMenu */,
 			);
@@ -287,10 +418,8 @@
 		D6E0543829CCC79800078BEC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				D6241DB829D382070017587F /* Survey */,
 				D6E0543929CCC7BD00078BEC /* UserViewModel.swift */,
 				D63241A229CB8791002009C9 /* SideMenuViewModel.swift */,
-				D6241DE029DCE2A60017587F /* ModelData.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -298,11 +427,7 @@
 		D6E0543B29CCCB3D00078BEC /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				D6241DC229D39B5A0017587F /* Survey */,
-				D632419629CB7D9C002009C9 /* DailySurveyView.swift */,
-				D6241DB129D371FB0017587F /* SurveyPage.swift */,
 				D6E0542F29CCBF6700078BEC /* ProfileView.swift */,
-				D6E0543129CCBF8500078BEC /* AnalyticsView.swift */,
 				D6E0543329CCC0D100078BEC /* EditSurveyView.swift */,
 				D6E0543529CCC0F400078BEC /* HelpView.swift */,
 				D6E0543C29CCCB6400078BEC /* LoginView.swift */,
@@ -315,7 +440,7 @@
 			children = (
 				D6241DBF29D3892F0017587F /* TypeProtocols */,
 				D6E0543F29CE288700078BEC /* UserConstants.swift */,
-				D6241DCB29D4D1580017587F /* SurveySheetState.swift */,
+				D650E68129F1BE8A00F5AB80 /* DateFormat.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -436,6 +561,7 @@
 			files = (
 				D632417429CB7747002009C9 /* Preview Assets.xcassets in Resources */,
 				D632417129CB7747002009C9 /* Assets.xcassets in Resources */,
+				D627F0D329EF22EC0033789F /* SurveyResults.json in Resources */,
 				D627F0C029DE38E20033789F /* SurveyPages.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,7 +588,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6241DC829D4B93F0017587F /* GymView.swift in Sources */,
-				D6241DCC29D4D1580017587F /* SurveySheetState.swift in Sources */,
 				D63241A329CB8791002009C9 /* SideMenuViewModel.swift in Sources */,
 				D6241DD029D785780017587F /* LabeledToggleViewModel.swift in Sources */,
 				D6E0543629CCC0F400078BEC /* HelpView.swift in Sources */,
@@ -473,24 +598,33 @@
 				D6241DBC29D382AF0017587F /* SurveyPageViewModel.swift in Sources */,
 				D6E0543229CCBF8500078BEC /* AnalyticsView.swift in Sources */,
 				D632416F29CB7746002009C9 /* ContentView.swift in Sources */,
+				D650E68829F83FFE00F5AB80 /* DayScoreAnalyticsView.swift in Sources */,
 				D6241DC129D3894B0017587F /* StringOrInt.swift in Sources */,
 				D6E0544529CE450600078BEC /* LabeledToggle.swift in Sources */,
 				D632419D29CB872D002009C9 /* SideMenuView.swift in Sources */,
 				D6241DBE29D384CD0017587F /* PromptInputs.swift in Sources */,
+				D627F0CD29EE16FA0033789F /* Model.xcdatamodeld in Sources */,
 				D6241DB229D371FB0017587F /* SurveyPage.swift in Sources */,
 				D6241DE129DCE2A60017587F /* ModelData.swift in Sources */,
 				D632419F29CB875B002009C9 /* SideMenuHeaderView.swift in Sources */,
 				D6E0543D29CCCB6400078BEC /* LoginView.swift in Sources */,
-				D6241DDA29DCAB630017587F /* DailySurveyViewController.swift in Sources */,
+				D6241DDA29DCAB630017587F /* PageViewController.swift in Sources */,
 				D6E0544729CE484500078BEC /* ExpandableMoreSection.swift in Sources */,
 				D6E0544029CE288700078BEC /* UserConstants.swift in Sources */,
+				D650E68A29F8442A00F5AB80 /* SurveyPageAnalysisView.swift in Sources */,
+				D627F0CA29E5F7C10033789F /* SurveySubmittedView.swift in Sources */,
 				D632416D29CB7746002009C9 /* DaytaApp.swift in Sources */,
 				D6E0543029CCBF6700078BEC /* ProfileView.swift in Sources */,
 				D6241DB529D37E040017587F /* CaseIterableExtension.swift in Sources */,
 				D6241DC429D39B980017587F /* DayScoreView.swift in Sources */,
+				D627F0C429E0963D0033789F /* SubmitControl.swift in Sources */,
+				D627F0D129EF16A50033789F /* DailySurveyViewModel.swift in Sources */,
 				D6241DD429D789450017587F /* SliderInputViewModel.swift in Sources */,
 				D6241DD629D7B0A70017587F /* ExpandableMoreSectionViewModel.swift in Sources */,
+				D650E68C29F8471000F5AB80 /* SurveyPageAnalyticsViewModel.swift in Sources */,
+				D650E68229F1BE8A00F5AB80 /* DateFormat.swift in Sources */,
 				D6E0543A29CCC7BD00078BEC /* UserViewModel.swift in Sources */,
+				D6053DCA29F1B165003B48E9 /* SurveyResultsExample.swift in Sources */,
 				D6E0543429CCC0D100078BEC /* EditSurveyView.swift in Sources */,
 				D632419A29CB7F13002009C9 /* BlueButton.swift in Sources */,
 				D6241DCE29D774610017587F /* SubmitView.swift in Sources */,
@@ -650,9 +784,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Dayta/Dayta.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dayta/Preview Content\"";
+				DEVELOPMENT_TEAM = R938GHFPVM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -667,6 +804,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Dayta.Dayta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -678,9 +816,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Dayta/Dayta.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dayta/Preview Content\"";
+				DEVELOPMENT_TEAM = R938GHFPVM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -695,6 +836,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Dayta.Dayta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -813,6 +955,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D627F0CB29EE16FA0033789F /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D627F0CC29EE16FA0033789F /* Model.xcdatamodel */,
+			);
+			currentVersion = D627F0CC29EE16FA0033789F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D632416129CB7746002009C9 /* Project object */;
 }
