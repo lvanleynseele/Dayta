@@ -12,32 +12,44 @@ struct SurveyPage: View {
     
     var body: some View {
         
-        Section {
-            Text(model.pageLabel)
-                .foregroundColor(Color.blue)
-                .font(.title2)
-                .padding()
-        }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        
-        VStack{
+        GeometryReader { geometry in
             Section {
-                if (model.mainSlider != nil){
-                    SliderInput(model: model.mainSlider!)
-                }
-                else{
-                    if (model.mainToggle != nil){
-                        LabeledToggle(model: model.mainToggle!)
+                Text(model.pageLabel)
+                    .foregroundColor(Color.blue)
+                    .font(.title2)
+                    .padding()
+            }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            
+            
+            VStack{
+                Section {
+                    if (model.mainSlider != nil){
+                        SliderInput(model: model.mainSlider!)
+                    }
+                    else{
+                        if (model.mainToggle != nil){
+                            LabeledToggle(model: model.mainToggle!)
+                        }
                     }
                 }
-            }//.frame(width: 200, height: 200, alignment: .top)
-//                .border(.black)
-//                .cornerRadius(20)
-//
-            if(model.morePrompts != nil) {
-                Section {
-                    ExpandableMoreSection(model: model.morePrompts!)
+                .position(x: geometry.size.width/2, y: geometry.size.height/4)
+                
+                if(model.morePrompts != nil) {
+                    Section {
+                        ExpandableMoreSection(model: model.morePrompts!)
+                    }.frame(maxWidth: 300)
+                    .position(x: geometry.size.width/2, y: geometry.size.height/5)
                 }
             }
-        }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        
+            
+        }
+    }
+}
+
+
+struct SurveyPage_Previews: PreviewProvider {
+    static var previews: some View {
+        SurveyPage(model: surveyPageExampleSlider)
     }
 }

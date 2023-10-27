@@ -12,88 +12,49 @@ struct SurveyPageAnalysisView: View {
     var model: SurveyPageAnalyticsViewModel
     
     var body: some View {
-        Section {
-            Text(model.pageLabel)
-                .foregroundColor(Color.blue)
-                .font(.title2)
-                .padding()
-        }.frame(alignment: .top)
+        //        ZStack{
+        //            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.green]),
+        //                           startPoint: .top,
+        //                           endPoint: .bottom)
+        //            .ignoresSafeArea()
         
-        
-        ForEach(model.attributes){ attribute in
-            if(attribute.sliderChartData != nil){
-                SliderChartView(data: attribute)
+        ScrollView {
+            Section {
+                Text(model.pageLabel)
+                    .foregroundColor(Color.blue)
+                    .font(.title2)
+                    .padding()
+            }.frame(maxWidth: 350, alignment: .top)
+                .border(.black)
+                
+            ForEach(model.attributes){ attribute in
+                Section{
+                    Text(attribute.prompt)
+                        .foregroundColor(Color.blue)
+                        .font(.title2)
+                        .padding()
                     
-            }
-            else{
-                if(attribute.toggleChartData != nil) {
-                    ToggleChartView(data: attribute)
+                    if(attribute.sliderData != nil){
+                        SliderChartView(data: attribute.sliderData!)
+                        SliderStatsAnalyticsView(data: attribute.sliderData!)
+                    }
+                    else{
+                        if(attribute.toggleData != nil) {
+                            ToggleChartView(data: attribute.toggleData!)
+                            ToggleStatsAnalyticsView(data: attribute.toggleData!)
+                        }
+                    }
+                    
                 }
+                Divider()
             }
-        }.frame(width: 300, height: 300)
-    }
-}
-
-
-struct SliderChartView: View {
-    var data: surveyAttribute
-    
-    var body: some View {
-        Section {
-            Chart {
-                ForEach(data.sliderChartData!) { survey in
-                    LineMark(x: .value("Date", formatDateShort(date: survey.date)),
-                             y: .value("Score", survey.value)
-                    )
-                }
-            }
-//            .chartXAxis {
-//                //count should be made into variable to display different time ranges
-//                AxisMarks(values: .stride(by: .day, count: 7)) { _ in
-//                    AxisValueLabel(format: .dateTime.day(.twoDigits))
-//                }
-//            }
-            .chartYAxis{
-                AxisMarks(values: .stride(by: 1))
-            }
-            .chartYScale(domain: [0,7])
         }
+        .navigationTitle("Analytics")
     }
 }
 
-struct ToggleChartView: View {
-    var data: surveyAttribute
-    
-    var body: some View {
-        Section {
-            Chart {
-                ForEach(data.toggleChartData!) { survey in
-                    BarMark(x: .value("Date", formatDateShort(date: survey.date)),
-                            y: .value("Score", survey.value == true ? 1 : -1)
-                    )
-                }
-            }.chartXAxis {
-                //count should be made into variable to display different time ranges
-                AxisMarks(values: .stride(by: .day, count: 7)) { _ in
-                    AxisValueLabel(format: .dateTime.day(.twoDigits))
-                }
-            }
-            .chartYAxis{
-                AxisMarks(values: .stride(by: 1))
-            }
-            .chartYScale(domain: [-1,1])
-        }
+struct SurveyPageAnalysisView_Previews: PreviewProvider {
+    static var previews: some View {
+        SurveyPageAnalysisView(model: SurveyPageAnalyticsExample)
     }
-    
 }
-
-
-
-
-
-
-//struct SurveyPageAnalysisView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SurveyPageAnalysisView(surveyData: surveyDataExample)
-//    }
-//}

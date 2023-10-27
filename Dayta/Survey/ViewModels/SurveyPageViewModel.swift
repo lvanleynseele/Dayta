@@ -17,13 +17,13 @@ class SurveyPageViewModel: Identifiable, ObservableObject, Codable {
     @Published var mainToggle: LabeledToggleViewModel?
     @Published var morePrompts: ExpandableMoreSectionViewModel?
     
-    init(id: String, pageLabel: String, pagePrompt: String, mainSlider: SliderViewModel?, mainToggle: LabeledToggleViewModel?, morePrompts: ExpandableMoreSectionViewModel?) {
+    init(id: String, pageLabel: String, pagePrompt: String, mainSlider: SliderViewModel? = nil, mainToggle: LabeledToggleViewModel? = nil, morePrompts: ExpandableMoreSectionViewModel? = nil) {
         self.id = id
         self.pageLabel = pageLabel
         self.pagePrompt = pagePrompt
-        self.mainSlider = mainSlider ?? nil
-        self.mainToggle = mainToggle ?? nil
-        self.morePrompts = morePrompts ?? nil
+        self.mainSlider = mainSlider
+        self.mainToggle = mainToggle
+        self.morePrompts = morePrompts
     }
     
     private enum codingKeys: CodingKey {

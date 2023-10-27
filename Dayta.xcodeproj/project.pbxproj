@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D6053DCA29F1B165003B48E9 /* SurveyResultsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6053DC929F1B165003B48E9 /* SurveyResultsExample.swift */; };
+		D6143DF62A0D6C7F001A7B84 /* DailySurveyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6143DF52A0D6C7F001A7B84 /* DailySurveyNavigationController.swift */; };
+		D620C2F82A04756F005E72DA /* LastPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D620C2F72A04756F005E72DA /* LastPageButton.swift */; };
 		D6241DB229D371FB0017587F /* SurveyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DB129D371FB0017587F /* SurveyPage.swift */; };
 		D6241DB529D37E040017587F /* CaseIterableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DB429D37E040017587F /* CaseIterableExtension.swift */; };
 		D6241DBC29D382AF0017587F /* SurveyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DBB29D382AF0017587F /* SurveyPageViewModel.swift */; };
@@ -16,7 +18,6 @@
 		D6241DC429D39B980017587F /* DayScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DC329D39B980017587F /* DayScoreView.swift */; };
 		D6241DC629D4B6C70017587F /* ProductivityScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DC529D4B6C70017587F /* ProductivityScoreView.swift */; };
 		D6241DC829D4B93F0017587F /* GymView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DC729D4B93F0017587F /* GymView.swift */; };
-		D6241DCE29D774610017587F /* SubmitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DCD29D774610017587F /* SubmitView.swift */; };
 		D6241DD029D785780017587F /* LabeledToggleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DCF29D785780017587F /* LabeledToggleViewModel.swift */; };
 		D6241DD429D789450017587F /* SliderInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DD329D789450017587F /* SliderInputViewModel.swift */; };
 		D6241DD629D7B0A70017587F /* ExpandableMoreSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6241DD529D7B0A70017587F /* ExpandableMoreSectionViewModel.swift */; };
@@ -46,6 +47,22 @@
 		D650E68829F83FFE00F5AB80 /* DayScoreAnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650E68729F83FFE00F5AB80 /* DayScoreAnalyticsView.swift */; };
 		D650E68A29F8442A00F5AB80 /* SurveyPageAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650E68929F8442A00F5AB80 /* SurveyPageAnalysisView.swift */; };
 		D650E68C29F8471000F5AB80 /* SurveyPageAnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650E68B29F8471000F5AB80 /* SurveyPageAnalyticsViewModel.swift */; };
+		D66D2D6F2A12A8E000F1F180 /* SliderChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D2D6E2A12A8E000F1F180 /* SliderChartView.swift */; };
+		D66D2D712A12BB2C00F1F180 /* ColorScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D2D702A12BB2C00F1F180 /* ColorScale.swift */; };
+		D66D2D732A12D84F00F1F180 /* ToggleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D2D722A12D84F00F1F180 /* ToggleChartView.swift */; };
+		D66D2D752A12FD1700F1F180 /* SliderStatsAnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D2D742A12FD1700F1F180 /* SliderStatsAnalyticsView.swift */; };
+		D66D2D772A14030800F1F180 /* ToggleStatsAnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D2D762A14030800F1F180 /* ToggleStatsAnalyticsView.swift */; };
+		D66D2D792A14034100F1F180 /* LabelledNumberBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66D2D782A14034100F1F180 /* LabelledNumberBox.swift */; };
+		D66DE4BE2A145FDA00E45B98 /* SurveyData.json in Resources */ = {isa = PBXBuildFile; fileRef = D66DE4BD2A145FDA00E45B98 /* SurveyData.json */; };
+		D69979172A18016500A400B5 /* EditPageMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69979162A18016500A400B5 /* EditPageMethods.swift */; };
+		D699791A2A18067000A400B5 /* MainEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69979192A18067000A400B5 /* MainEditView.swift */; };
+		D699791C2A18083000A400B5 /* EditSurveyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D699791B2A18083000A400B5 /* EditSurveyPageView.swift */; };
+		D699791E2A1808E300A400B5 /* SurveyPageExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D699791D2A1808E300A400B5 /* SurveyPageExample.swift */; };
+		D69979202A180DF600A400B5 /* DashedBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D699791F2A180DF600A400B5 /* DashedBorder.swift */; };
+		D69979232A1C03DC00A400B5 /* EditButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69979222A1C03DC00A400B5 /* EditButtonController.swift */; };
+		D69979262A1C086300A400B5 /* EditSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69979252A1C086300A400B5 /* EditSlider.swift */; };
+		D69979282A1C2A8B00A400B5 /* TextFieldInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69979272A1C2A8B00A400B5 /* TextFieldInputController.swift */; };
+		D699792C2A1D558C00A400B5 /* EditToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D699792B2A1D558C00A400B5 /* EditToggle.swift */; };
 		D6E0543029CCBF6700078BEC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0542F29CCBF6700078BEC /* ProfileView.swift */; };
 		D6E0543229CCBF8500078BEC /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0543129CCBF8500078BEC /* AnalyticsView.swift */; };
 		D6E0543429CCC0D100078BEC /* EditSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0543329CCC0D100078BEC /* EditSurveyView.swift */; };
@@ -77,6 +94,8 @@
 
 /* Begin PBXFileReference section */
 		D6053DC929F1B165003B48E9 /* SurveyResultsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultsExample.swift; sourceTree = "<group>"; };
+		D6143DF52A0D6C7F001A7B84 /* DailySurveyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySurveyNavigationController.swift; sourceTree = "<group>"; };
+		D620C2F72A04756F005E72DA /* LastPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPageButton.swift; sourceTree = "<group>"; };
 		D6241DB129D371FB0017587F /* SurveyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPage.swift; sourceTree = "<group>"; };
 		D6241DB429D37E040017587F /* CaseIterableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseIterableExtension.swift; sourceTree = "<group>"; };
 		D6241DBB29D382AF0017587F /* SurveyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPageViewModel.swift; sourceTree = "<group>"; };
@@ -85,7 +104,6 @@
 		D6241DC329D39B980017587F /* DayScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayScoreView.swift; sourceTree = "<group>"; };
 		D6241DC529D4B6C70017587F /* ProductivityScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityScoreView.swift; sourceTree = "<group>"; };
 		D6241DC729D4B93F0017587F /* GymView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymView.swift; sourceTree = "<group>"; };
-		D6241DCD29D774610017587F /* SubmitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitView.swift; sourceTree = "<group>"; };
 		D6241DCF29D785780017587F /* LabeledToggleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledToggleViewModel.swift; sourceTree = "<group>"; };
 		D6241DD329D789450017587F /* SliderInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderInputViewModel.swift; sourceTree = "<group>"; };
 		D6241DD529D7B0A70017587F /* ExpandableMoreSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableMoreSectionViewModel.swift; sourceTree = "<group>"; };
@@ -119,6 +137,22 @@
 		D650E68729F83FFE00F5AB80 /* DayScoreAnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayScoreAnalyticsView.swift; sourceTree = "<group>"; };
 		D650E68929F8442A00F5AB80 /* SurveyPageAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPageAnalysisView.swift; sourceTree = "<group>"; };
 		D650E68B29F8471000F5AB80 /* SurveyPageAnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPageAnalyticsViewModel.swift; sourceTree = "<group>"; };
+		D66D2D6E2A12A8E000F1F180 /* SliderChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderChartView.swift; sourceTree = "<group>"; };
+		D66D2D702A12BB2C00F1F180 /* ColorScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScale.swift; sourceTree = "<group>"; };
+		D66D2D722A12D84F00F1F180 /* ToggleChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleChartView.swift; sourceTree = "<group>"; };
+		D66D2D742A12FD1700F1F180 /* SliderStatsAnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderStatsAnalyticsView.swift; sourceTree = "<group>"; };
+		D66D2D762A14030800F1F180 /* ToggleStatsAnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStatsAnalyticsView.swift; sourceTree = "<group>"; };
+		D66D2D782A14034100F1F180 /* LabelledNumberBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledNumberBox.swift; sourceTree = "<group>"; };
+		D66DE4BD2A145FDA00E45B98 /* SurveyData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SurveyData.json; sourceTree = "<group>"; };
+		D69979162A18016500A400B5 /* EditPageMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPageMethods.swift; sourceTree = "<group>"; };
+		D69979192A18067000A400B5 /* MainEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEditView.swift; sourceTree = "<group>"; };
+		D699791B2A18083000A400B5 /* EditSurveyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSurveyPageView.swift; sourceTree = "<group>"; };
+		D699791D2A1808E300A400B5 /* SurveyPageExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPageExample.swift; sourceTree = "<group>"; };
+		D699791F2A180DF600A400B5 /* DashedBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedBorder.swift; sourceTree = "<group>"; };
+		D69979222A1C03DC00A400B5 /* EditButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonController.swift; sourceTree = "<group>"; };
+		D69979252A1C086300A400B5 /* EditSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSlider.swift; sourceTree = "<group>"; };
+		D69979272A1C2A8B00A400B5 /* TextFieldInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInputController.swift; sourceTree = "<group>"; };
+		D699792B2A1D558C00A400B5 /* EditToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditToggle.swift; sourceTree = "<group>"; };
 		D6E0542F29CCBF6700078BEC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D6E0543129CCBF8500078BEC /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
 		D6E0543329CCC0D100078BEC /* EditSurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSurveyView.swift; sourceTree = "<group>"; };
@@ -170,6 +204,11 @@
 		D6053DC429F1A4AA003B48E9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D66D2D6E2A12A8E000F1F180 /* SliderChartView.swift */,
+				D66D2D722A12D84F00F1F180 /* ToggleChartView.swift */,
+				D66D2D742A12FD1700F1F180 /* SliderStatsAnalyticsView.swift */,
+				D66D2D762A14030800F1F180 /* ToggleStatsAnalyticsView.swift */,
+				D66D2D782A14034100F1F180 /* LabelledNumberBox.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -242,7 +281,6 @@
 				D6241DC329D39B980017587F /* DayScoreView.swift */,
 				D6241DC529D4B6C70017587F /* ProductivityScoreView.swift */,
 				D6241DC729D4B93F0017587F /* GymView.swift */,
-				D6241DCD29D774610017587F /* SubmitView.swift */,
 				D627F0C929E5F7C10033789F /* SurveySubmittedView.swift */,
 			);
 			path = Survey;
@@ -252,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				D627F0C329E0963D0033789F /* SubmitControl.swift */,
+				D6143DF52A0D6C7F001A7B84 /* DailySurveyNavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -261,7 +300,9 @@
 			children = (
 				D627F0BF29DE38E20033789F /* SurveyPages.json */,
 				D627F0D229EF22EC0033789F /* SurveyResults.json */,
+				D66DE4BD2A145FDA00E45B98 /* SurveyData.json */,
 				D6053DC929F1B165003B48E9 /* SurveyResultsExample.swift */,
+				D699791D2A1808E300A400B5 /* SurveyPageExample.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -327,6 +368,7 @@
 		D632416B29CB7746002009C9 /* Dayta */ = {
 			isa = PBXGroup;
 			children = (
+				D69979142A18012900A400B5 /* Edit */,
 				D650E68329F72AD500F5AB80 /* PageControl */,
 				D627F0CE29EE17BB0033789F /* Dayta.entitlements */,
 				D632416C29CB7746002009C9 /* DaytaApp.swift */,
@@ -375,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				D632419929CB7F13002009C9 /* BlueButton.swift */,
+				D699791F2A180DF600A400B5 /* DashedBorder.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -402,8 +445,55 @@
 			children = (
 				D6241DD929DCAB630017587F /* PageViewController.swift */,
 				D6241DDB29DCC0960017587F /* PageControl.swift */,
+				D620C2F72A04756F005E72DA /* LastPageButton.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D69979142A18012900A400B5 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				D69979242A1C085400A400B5 /* Components */,
+				D69979212A1C03C800A400B5 /* Controllers */,
+				D69979182A18063B00A400B5 /* Views */,
+				D69979152A18013700A400B5 /* Methods */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		D69979152A18013700A400B5 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				D69979162A18016500A400B5 /* EditPageMethods.swift */,
+			);
+			path = Methods;
+			sourceTree = "<group>";
+		};
+		D69979182A18063B00A400B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D69979192A18067000A400B5 /* MainEditView.swift */,
+				D699791B2A18083000A400B5 /* EditSurveyPageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D69979212A1C03C800A400B5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D69979222A1C03DC00A400B5 /* EditButtonController.swift */,
+				D69979272A1C2A8B00A400B5 /* TextFieldInputController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D69979242A1C085400A400B5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D69979252A1C086300A400B5 /* EditSlider.swift */,
+				D699792B2A1D558C00A400B5 /* EditToggle.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		D6E0542E29CCBF3100078BEC /* Views */ = {
@@ -441,6 +531,7 @@
 				D6241DBF29D3892F0017587F /* TypeProtocols */,
 				D6E0543F29CE288700078BEC /* UserConstants.swift */,
 				D650E68129F1BE8A00F5AB80 /* DateFormat.swift */,
+				D66D2D702A12BB2C00F1F180 /* ColorScale.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -562,6 +653,7 @@
 				D632417429CB7747002009C9 /* Preview Assets.xcassets in Resources */,
 				D632417129CB7747002009C9 /* Assets.xcassets in Resources */,
 				D627F0D329EF22EC0033789F /* SurveyResults.json in Resources */,
+				D66DE4BE2A145FDA00E45B98 /* SurveyData.json in Resources */,
 				D627F0C029DE38E20033789F /* SurveyPages.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,31 +685,48 @@
 				D6E0543629CCC0F400078BEC /* HelpView.swift in Sources */,
 				D63241A129CB8773002009C9 /* SideMenuOptionView.swift in Sources */,
 				D632419729CB7D9C002009C9 /* DailySurveyView.swift in Sources */,
+				D699791A2A18067000A400B5 /* MainEditView.swift in Sources */,
 				D6241DC629D4B6C70017587F /* ProductivityScoreView.swift in Sources */,
 				D6241DDC29DCC0960017587F /* PageControl.swift in Sources */,
+				D699791E2A1808E300A400B5 /* SurveyPageExample.swift in Sources */,
+				D699791C2A18083000A400B5 /* EditSurveyPageView.swift in Sources */,
 				D6241DBC29D382AF0017587F /* SurveyPageViewModel.swift in Sources */,
 				D6E0543229CCBF8500078BEC /* AnalyticsView.swift in Sources */,
+				D69979282A1C2A8B00A400B5 /* TextFieldInputController.swift in Sources */,
+				D69979232A1C03DC00A400B5 /* EditButtonController.swift in Sources */,
+				D66D2D6F2A12A8E000F1F180 /* SliderChartView.swift in Sources */,
 				D632416F29CB7746002009C9 /* ContentView.swift in Sources */,
 				D650E68829F83FFE00F5AB80 /* DayScoreAnalyticsView.swift in Sources */,
+				D66D2D752A12FD1700F1F180 /* SliderStatsAnalyticsView.swift in Sources */,
 				D6241DC129D3894B0017587F /* StringOrInt.swift in Sources */,
+				D66D2D772A14030800F1F180 /* ToggleStatsAnalyticsView.swift in Sources */,
+				D69979262A1C086300A400B5 /* EditSlider.swift in Sources */,
 				D6E0544529CE450600078BEC /* LabeledToggle.swift in Sources */,
+				D69979202A180DF600A400B5 /* DashedBorder.swift in Sources */,
 				D632419D29CB872D002009C9 /* SideMenuView.swift in Sources */,
 				D6241DBE29D384CD0017587F /* PromptInputs.swift in Sources */,
+				D699792C2A1D558C00A400B5 /* EditToggle.swift in Sources */,
 				D627F0CD29EE16FA0033789F /* Model.xcdatamodeld in Sources */,
 				D6241DB229D371FB0017587F /* SurveyPage.swift in Sources */,
 				D6241DE129DCE2A60017587F /* ModelData.swift in Sources */,
 				D632419F29CB875B002009C9 /* SideMenuHeaderView.swift in Sources */,
 				D6E0543D29CCCB6400078BEC /* LoginView.swift in Sources */,
 				D6241DDA29DCAB630017587F /* PageViewController.swift in Sources */,
+				D66D2D712A12BB2C00F1F180 /* ColorScale.swift in Sources */,
+				D66D2D792A14034100F1F180 /* LabelledNumberBox.swift in Sources */,
 				D6E0544729CE484500078BEC /* ExpandableMoreSection.swift in Sources */,
 				D6E0544029CE288700078BEC /* UserConstants.swift in Sources */,
 				D650E68A29F8442A00F5AB80 /* SurveyPageAnalysisView.swift in Sources */,
 				D627F0CA29E5F7C10033789F /* SurveySubmittedView.swift in Sources */,
 				D632416D29CB7746002009C9 /* DaytaApp.swift in Sources */,
+				D6143DF62A0D6C7F001A7B84 /* DailySurveyNavigationController.swift in Sources */,
 				D6E0543029CCBF6700078BEC /* ProfileView.swift in Sources */,
 				D6241DB529D37E040017587F /* CaseIterableExtension.swift in Sources */,
 				D6241DC429D39B980017587F /* DayScoreView.swift in Sources */,
 				D627F0C429E0963D0033789F /* SubmitControl.swift in Sources */,
+				D69979172A18016500A400B5 /* EditPageMethods.swift in Sources */,
+				D620C2F82A04756F005E72DA /* LastPageButton.swift in Sources */,
+				D66D2D732A12D84F00F1F180 /* ToggleChartView.swift in Sources */,
 				D627F0D129EF16A50033789F /* DailySurveyViewModel.swift in Sources */,
 				D6241DD429D789450017587F /* SliderInputViewModel.swift in Sources */,
 				D6241DD629D7B0A70017587F /* ExpandableMoreSectionViewModel.swift in Sources */,
@@ -627,7 +736,6 @@
 				D6053DCA29F1B165003B48E9 /* SurveyResultsExample.swift in Sources */,
 				D6E0543429CCC0D100078BEC /* EditSurveyView.swift in Sources */,
 				D632419A29CB7F13002009C9 /* BlueButton.swift in Sources */,
-				D6241DCE29D774610017587F /* SubmitView.swift in Sources */,
 				D6E0544329CE2E2000078BEC /* SliderInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

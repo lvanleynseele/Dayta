@@ -26,7 +26,7 @@ struct SideMenuHeaderView: View {
                 }
             )
             
-            LoggedInUser(profile: $profile)
+            LoggedInUser(user: $profile)
         }
         
         //need to get app context for user status
@@ -35,15 +35,15 @@ struct SideMenuHeaderView: View {
 
 
 struct LoggedInUser: View {
-    @Binding var profile: UserViewModel
+    @Binding var user: UserViewModel
     var body: some View {
         
         //wrap this in nav link to profile page
         VStack (alignment: .leading){
             //This is for header of side menu, should be either user iniitals or photo if account exists, otherwise prompt to make profile
-            NoPhotoIcon()
+            NoPhotoIcon(user: user)
             
-            Text("\(profile.firstName) \(profile.lastName)")
+            Text("\(user.firstName) \(user.lastName)")
                 .font(.system(size: 24, weight: .semibold))
                 .foregroundColor(.white)
             
@@ -67,8 +67,12 @@ struct PhotoIcon: View {
 
 //if user has no profile pic, use initials
 struct NoPhotoIcon: View {
+    var user: UserViewModel
+    
+    
+    
     var body: some View {
-        Text("LV")
+        Text(getInitials())
             .font(.largeTitle)
             .foregroundColor(.white)
             .scaledToFill()
@@ -78,6 +82,10 @@ struct NoPhotoIcon: View {
 //            .padding(2)
             .background(.green)
             .clipShape(Circle())
+    }
+    
+    func getInitials() -> String {
+        return String(user.firstName[user.firstName.index(user.firstName.startIndex, offsetBy: 0)]) + String(user.lastName[user.lastName.index(user.lastName.startIndex, offsetBy: 0)])
     }
 }
 

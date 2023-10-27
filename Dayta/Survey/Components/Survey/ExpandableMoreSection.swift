@@ -13,6 +13,7 @@ struct ExpandableMoreSection: View {
     @State var opened: Bool = false
         
     var body: some View {
+        
         VStack {
             Button(
                 action: {
@@ -35,15 +36,17 @@ struct ExpandableMoreSection: View {
                 }
             )
             .buttonStyle(PlainButtonStyle())
-            
-            VStack {
-                ForEach(model.morePrompts, id: \.self.id) { _prompt in
-                    LabeledToggle(model: _prompt.self)
+            ScrollView{
+                VStack {
+                    ForEach(model.morePrompts, id: \.self.id) { _prompt in
+                        LabeledToggle(model: _prompt.self)
+                    }
                 }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: collapsed ? 0 : .none)
+                .clipped()
+                .transition(.slide)
             }
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: collapsed ? 0 : .none)
-            .clipped()
-            .transition(.slide)
+            
         }
         .frame(minWidth: 0, maxWidth: 350)
     }

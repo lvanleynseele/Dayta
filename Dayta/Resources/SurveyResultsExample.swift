@@ -21,3 +21,42 @@ let surveyDataExample: [DailySurveyViewModel] =
 
 
 ]
+
+
+
+let sliderdata: SliderData = SliderData(maxValue: 5, sliderData: [
+    SliderChartData(date: Date.now, value: 2,  dayScore: 7),
+    SliderChartData(date: Date.init(timeInterval: 100000, since: Date.now), value: 4,  dayScore: 3),
+    SliderChartData(date: Date.init(timeInterval: 200000, since: Date.now), value: 5,  dayScore: 6),
+    SliderChartData(date: Date.init(timeInterval: 300000, since: Date.now), value: 2,  dayScore: 6),
+    SliderChartData(date: Date.init(timeInterval: 400000, since: Date.now), value: 3,  dayScore: 6),
+    SliderChartData(date: Date.init(timeInterval: 500000, since: Date.now), value: 1,  dayScore: 6),
+    SliderChartData(date: Date.init(timeInterval: 600000, since: Date.now), value: 5,  dayScore: 6),
+    SliderChartData(date: Date.init(timeInterval: 700000, since: Date.now), value: 3,  dayScore: 6),
+])
+
+
+
+let sliderChartDataExample: SurveyAttribute = SurveyAttribute(prompt: "Productivitty", sliderData: sliderdata)
+
+
+let toggledata: ToggleData = ToggleData(toggleData: [
+    ToggleChartData(date: Date.now, value: true,  dayScore: 7),
+    ToggleChartData(date: Date.init(timeInterval: 100000, since: Date.now), value: true,  dayScore: 3),
+    ToggleChartData(date: Date.init(timeInterval: 200000, since: Date.now), value: false,  dayScore: 6),
+    ToggleChartData(date: Date.init(timeInterval: 300000, since: Date.now), value: true,  dayScore: 6),
+    ToggleChartData(date: Date.init(timeInterval: 400000, since: Date.now), value: false,  dayScore: 6),
+    ToggleChartData(date: Date.init(timeInterval: 500000, since: Date.now), value: false,  dayScore: 6),
+    ToggleChartData(date: Date.init(timeInterval: 600000, since: Date.now), value: true,  dayScore: 6),
+    ToggleChartData(date: Date.init(timeInterval: 700000, since: Date.now), value: false,  dayScore: 6),
+])
+
+let toggleChartDataExample: SurveyAttribute = SurveyAttribute(prompt: "Productivity", toggleData: toggledata)
+
+
+let sliderSurveyAttribute: SurveyAttribute = SurveyAttribute(prompt: "How productive were you today?", sliderData: sliderdata)
+
+let toggleSurveyAttribute: SurveyAttribute = SurveyAttribute(prompt: "Did you commit code?", toggleData: toggledata)
+
+
+let SurveyPageAnalyticsExample: SurveyPageAnalyticsViewModel = SurveyPageAnalyticsViewModel(id: UUID().uuidString, pageLabel: "Productivity", attributes: [sliderSurveyAttribute, toggleSurveyAttribute])

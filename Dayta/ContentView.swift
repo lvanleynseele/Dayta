@@ -24,14 +24,21 @@ struct ContentView: View {
                                endPoint: .bottom)
                 .ignoresSafeArea()
                 if isSideMenuShowing {
-                    SideMenuView(isSideMenuShowing: $isSideMenuShowing, profile: $modelData.profile, surveyData: modelData.surveyData)
+                    SideMenuView(isSideMenuShowing: $isSideMenuShowing, profile: $modelData.profile, surveyData: modelData.surveyData, surveyPages: modelData.surveyPages)
                 }
                 ZStack {
                     Color(.white)
                     NavigationLink(destination: DailySurveyView(pages: modelData.surveyPages.map({ model in
                         SurveyPage(model: model)
-                    }))){
-                        Text("Take your daily survey")
+                    }), dailySurveys: modelData.dailySurveys, surveyData: modelData.surveyData)){
+                        if( Calendar.current.isDate(modelData.dailySurveys.last!.date, inSameDayAs: Date.now) == true){
+                            Text("Re-take your Daily Survey")
+                        }
+                        else{
+                            Text("Take your Daily Survey")
+                        }
+                        
+                        
                     }.buttonStyle(BlueButton())
                 }
                     .cornerRadius(isSideMenuShowing ? 20 : 10)

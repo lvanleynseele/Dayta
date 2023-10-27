@@ -7,11 +7,14 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 final class ModelData: ObservableObject {
     @Published var surveyPages: [SurveyPageViewModel] = load("SurveyPages.json")
     @Published var profile = UserViewModel.Liam
-    @Published var surveyData: [DailySurveyViewModel] = loadSurveyData("SurveyResults.json")
+    @Published var dailySurveys: [DailySurveyViewModel] = loadDailySurveys("SurveyResults.json")
+
+   @Published var surveyData: [SurveyPageAnalyticsViewModel] = load("SurveyData.json")
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
@@ -29,11 +32,7 @@ func load<T: Decodable>(_ filename: String) -> T {
     }
 
     do {
-        //add day score view model constant to an array. Should always be first page
-//        var pages: [SurveyPageViewModel] = [DayScoreView().model]
         let decoder = JSONDecoder()
-        //append pages to array
-        //return array 
         return try decoder.decode(T.self, from: data)
     } catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
@@ -41,10 +40,10 @@ func load<T: Decodable>(_ filename: String) -> T {
 }
 
 
-func loadSurveyData<T: Decodable>(_ filename: String) -> T {
+func loadDailySurveys<T: Decodable>(_ filename: String) -> T {
     let data: Data
 
-    guard let file = URL(string: "file:///Users/liamvanleynseele/Desktop/Dayta/Dayta/Resources/SurveyResults.json")
+    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
         else {
             fatalError("Couldn't find \(filename) in main bundle.")
     }
@@ -60,5 +59,35 @@ func loadSurveyData<T: Decodable>(_ filename: String) -> T {
         return try decoder.decode(T.self, from: data)
     } catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
+    }
+}
+
+func loadSurveyData(_ filename: String) -> [SurveyPageAnalyticsViewModel] {
+    let data: Data
+
+    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
+        else {
+            fatalError("Couldn't find \(filename) in main bundle.")
+    }
+
+    do {
+        data = try Data(contentsOf: file)
+    } catch {
+        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
+    }
+
+    do {
+        let decoder = JSONDecoder()
+        let surveyData = try decoder.decode([SurveyPageAnalyticsViewModel].self, from: data)
+        
+//        for i in 0...surveyData.count-2 {
+//            for j in i+1...surveyData.count-1 {
+//
+//            }
+//        }
+        
+        return surveyData
+    } catch {
+        fatalError("Couldn't parse \(filename) as \(SurveyPageAnalyticsViewModel.self):\n\(error)")
     }
 }

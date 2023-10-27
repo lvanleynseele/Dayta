@@ -26,8 +26,8 @@ struct AnalyticsView<Page: View>: View {
     }
 }
 
-struct AnalyticsView_Previews: PreviewProvider {
-    static var previews: some View {
-        AnalyticsView(pages: [DayScoreAnalyticsView(surveyData: surveyDataExample)])
-    }
-}
+//struct AnalyticsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AnalyticsView(pages: [DayScoreAnalyticsView(surveyData: surveyDataExample)])
+//    }
+//}

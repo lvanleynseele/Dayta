@@ -9,22 +9,31 @@ import SwiftUI
 import Charts
 
 struct DayScoreAnalyticsView: View {
-    var surveyData: [DailySurveyViewModel]
+    var model: SurveyPageAnalyticsViewModel
+    
+    
     
     var body: some View {
-        Chart {
-            ForEach(surveyData) { survey in
-                LineMark(x: .value("Date", formatDateShort(date: survey.date)),
-                         y: .value("Score", survey.survey[0].mainSlider!.inputState)
-                )
-            }
-        }
-        .frame(width: 300, height: 300)
+//        Section {
+//            Chart {
+//                ForEach(model.attributes[0].sliderData!) { survey in
+//                    LineMark(x: .value("Date", formatDateShort(date: survey.date)),
+//                             y: .value("Score", survey.value)
+//                    )
+//                }
+//            }
+//            .chartYAxis{
+//                AxisMarks(values: .stride(by: 1))
+//            }
+//            .chartYScale(domain: [0,7])
+//        }
+        Text(" ")
     }
 }
 
-struct DayScoreAnalyticsView_Previews: PreviewProvider {
-    static var previews: some View {
-        DayScoreAnalyticsView(surveyData: surveyDataExample)
-    }
-}
+
+//struct DayScoreAnalyticsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DayScoreAnalyticsView(surveyData: sliderChartDataExample)
+//    }
+//}

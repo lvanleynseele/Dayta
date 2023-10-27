@@ -11,7 +11,8 @@ import Foundation
 struct SideMenuView: View {
     @Binding var isSideMenuShowing: Bool
     @Binding var profile: UserViewModel
-    var surveyData: [DailySurveyViewModel]
+    var surveyData: [SurveyPageAnalyticsViewModel]
+    var surveyPages: [SurveyPageViewModel]
     
     var body: some View {
         ZStack {
@@ -27,101 +28,120 @@ struct SideMenuView: View {
                 NavigationLink(destination: ProfileView(),
                                label: { SideMenuOptionView(viewModel: SideMenuViewModel.profile) })
                 .foregroundColor(.white)
-                    NavigationLink(destination: AnalyticsView(pages: getAnalyticsPages(surveys: surveyData).map{ model in
+                
+                NavigationLink(destination: AnalyticsView(pages: surveyData.map{ model in
                         SurveyPageAnalysisView(model: model)
-                        
                     }),
                         label: { SideMenuOptionView(viewModel: SideMenuViewModel.analytics) })
                 .foregroundColor(.white)
                 
-                NavigationLink(destination: EditSurveyView(),
+                NavigationLink(destination: MainEditView(pages: surveyPages.map{ model in
+                        EditSurveyPageView(model: model)
+                    } ),
                                label: { SideMenuOptionView(viewModel: SideMenuViewModel.editSurvey) })
                 .foregroundColor(.white)
                 
                 NavigationLink(destination: HelpView(),
                                label: { SideMenuOptionView(viewModel: SideMenuViewModel.helpPage) })
                 .foregroundColor(.white)
-                
-//                ForEach(SideMenuViewModel.allCases, id: \.self) { option in
-//                    NavigationLink(destination: option.view ,
-//                                   label:{ SideMenuOptionView(viewModel: option)}
-//                    )
-//                    .foregroundColor(.white)
-//
-//                }
-                
                 Spacer()
             }
         }.navigationBarHidden(true)
-        
-        let temp = getAnalyticsPages(surveys: surveyData)
     }
     
     
-    
-    func getAnalyticsPages(surveys: [DailySurveyViewModel]) -> [SurveyPageAnalyticsViewModel]{
-        
-        var pageViewModels: [String : SurveyPageAnalyticsViewModel] = [:]
-        
-        //just cover main input for now
-        for i in 0..<surveyData.count {
-            let survey = surveyData[i]
-            
-            let currentDate = survey.date
-            
-            for j in 0..<survey.survey.count {
-                let page = survey.survey[j]
-                if(pageViewModels.keys.contains(page.pageLabel)){
-                    pageViewModels[page.pageLabel]!.attributes = makeChartData(page: page, date: currentDate, viewModels: pageViewModels)
-                }
-                else {
-                    pageViewModels[page.pageLabel] = makeSurveyPageAnalyticsViewModel(page: page, date: currentDate)
-                }
-                
-            }
-        }
-        
-        
-        return Array(pageViewModels.values)
-    }
-    
-    
-    func makeSurveyPageAnalyticsViewModel(page: SurveyPageViewModel, date: Date) -> SurveyPageAnalyticsViewModel {
-        
-        var attribute: surveyAttribute = surveyAttribute(prompt: page.pageLabel)
-        
-        if(page.mainSlider != nil){
-            attribute.sliderChartData = [sliderChartData(date: date, value: page.mainSlider!.inputState)]
-        }
-        
-        if(page.mainToggle != nil){
-            attribute.toggleChartData = [toggleChartData(date: date, value: page.mainToggle!.inputState)]
-        }
-        
-        return SurveyPageAnalyticsViewModel(id: page.id, pageLabel: page.pageLabel, attributes: [attribute])
-        
-    }
-    
-    func makeChartData (page: SurveyPageViewModel, date: Date, viewModels: [String: SurveyPageAnalyticsViewModel]) -> [surveyAttribute] {
-        let currentPageModel = viewModels[page.pageLabel]
-        //will need to do lookup on attribute when doing more than main prompt
-        var mainAttribute = currentPageModel?.attributes[0]
-        
-        if(page.mainSlider != nil){
-            mainAttribute?.sliderChartData?.append(sliderChartData(date: date, value: page.mainSlider!.inputState))
-        }
-        
-        if(page.mainToggle != nil){
-            mainAttribute?.toggleChartData?.append(toggleChartData(date: date, value: page.mainToggle!.inputState))
-        }
-        
-        return [mainAttribute!]
-    }
     
 }
 
 struct SideMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        SideMenuView(isSideMenuShowing: .constant(true), profile: .constant(UserViewModel.Liam), surveyData: [])
+        SideMenuView(isSideMenuShowing: .constant(true), profile: .constant(UserViewModel.Liam), surveyData: [], surveyPages: [])
     }
 }
+
+
+
+
+
+
+//converts daily survey vm to deprecated survey analystics vm
+/*
+ func getAnalyticsPages(surveys: [DailySurveyViewModel]) -> [SurveyPageAnalyticsViewModel]{
+
+     var pageViewModels: [String : SurveyPageAnalyticsViewModel] = [:]
+
+     //just cover main input for now
+     for i in 0..<surveyData.count {
+         let survey = surveyData[i]
+
+         let currentDate = survey.date
+         let dayScore = survey.dayScore
+
+         for j in 0..<survey.survey.count {
+             let page = survey.survey[j]
+             if(pageViewModels.keys.contains(page.pageLabel)){
+                 pageViewModels[page.pageLabel]!.attributes = makeChartData(page: page, date: currentDate, dayScore: dayScore, viewModels: pageViewModels)
+             }
+             else {
+                 pageViewModels[page.pageLabel] = makeSurveyPageAnalyticsViewModel(page: page, date: currentDate, dayScore: dayScore)
+             }
+
+         }
+     }
+
+     let encoder = JSONEncoder()
+     encoder.outputFormatting = .prettyPrinted
+
+     do {
+         let values: [SurveyPageAnalyticsViewModel] = Array(pageViewModels.values)
+
+         let encoded = try encoder.encode(values)
+
+         print(encoded)
+     }
+     catch {
+         print("Could not write to file: \(error)")
+     }
+
+
+     return Array(pageViewModels.values)
+ }
+
+
+ func makeSurveyPageAnalyticsViewModel(page: SurveyPageViewModel, date: Date, dayScore: Int) -> SurveyPageAnalyticsViewModel {
+
+     var attribute: SurveyAttribute = SurveyAttribute(prompt: page.pageLabel)
+
+     if(page.mainSlider != nil){
+         attribute.sliderData?.chartData = [SliderChartData(date: date, value: page.mainSlider!.inputState, dayScore: dayScore)]
+     }
+
+     if(page.mainToggle != nil){
+         attribute.toggleData?.chartData = [ToggleChartData(date: date, value: page.mainToggle!.inputState, dayScore: dayScore)]
+     }
+
+     return SurveyPageAnalyticsViewModel(id: page.id, pageLabel: page.pageLabel, attributes: [attribute])
+
+ }
+
+ func makeChartData (page: SurveyPageViewModel, date: Date, dayScore: Int, viewModels: [String: SurveyPageAnalyticsViewModel]) -> [SurveyAttribute] {
+     let currentPageModel = viewModels[page.pageLabel]
+     //will need to do lookup on attribute when doing more than main prompt
+     let mainAttribute = currentPageModel?.attributes[0]
+
+     if(page.mainSlider != nil){
+         mainAttribute?.sliderData!.chartData.append(SliderChartData(date: date, value: page.mainSlider!.inputState, dayScore: dayScore))
+     }
+
+     if(page.mainToggle != nil){
+         mainAttribute?.toggleData!.chartData.append(ToggleChartData(date: date, value: page.mainToggle!.inputState, dayScore: dayScore))
+     }
+
+     return [mainAttribute!]
+ }
+
+ ```
+
+ 
+ */
+

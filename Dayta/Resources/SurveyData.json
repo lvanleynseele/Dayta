@@ -1,0 +1,204 @@
+
+[
+    {
+        "id" : "2774ca86-e6df-42a3-938e-d1503e38af72",
+        "pageLabel" : "Day Score",
+        "attributes": [
+            {
+                "id": "1f1436e7-6162-4bfe-bd74-8ebefbe63971",
+                "prompt": "Day Score",
+                "sliderData": {
+                    "id": "52620570-f4dd-11ed-a05b-0242ac120005",
+                    "maxValue": 7,
+                    "chartData": [
+                        {
+                            "id": "52620570-f4dd-11ed-a05b-0242ac120006",
+                            "date": 706126796.82486606,
+                            "value": 5,
+                            "dayScore": 5
+                        },
+                        {
+                            "id": "52620570-f4dd-11ed-a05b-0242ac120007",
+                            "date": 706226796.82492197,
+                            "value": 7,
+                            "dayScore": 7
+                        },
+                        {
+                            "id": "52620570-f4dd-11ed-a05b-0242ac120008",
+                            "date": 706326796.82492399,
+                            "value": 3,
+                            "dayScore": 3
+                        },
+                        {
+                            "id": "52620570-f4dd-11ed-a05b-0242ac120009",
+                            "date": 706526796.82492697,
+                            "value": 4,
+                            "dayScore": 4
+                        },
+                        {
+                            "id": "52620570-f4dd-11ed-a05b-0242ac120010",
+                            "date": 706626796.824929,
+                            "value": 1,
+                            "dayScore": 1
+                        },
+                        {
+                            "id": "52620570-f4dd-11ed-a05b-0242ac120011",
+                            "date": 706726796.82492995,
+                            "value": 6,
+                            "dayScore": 6
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id" : "f501dd72-f4de-11ed-a05b-0242ac120003",
+        "pageLabel" : "Productivity",
+        "attributes": [
+            {
+                "id": "62620570-f4dd-11ed-a05b-0242ac120004",
+                "prompt": "Productivity",
+                "sliderData": {
+                    "id": "62620570-f4dd-11ed-a05b-0242ac120005",
+                    "maxValue": 5,
+                    "chartData": [
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120006",
+                            "date": 706126796.82486606,
+                            "value": 5,
+                            "dayScore": 5
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120007",
+                            "date": 706226796.82492197,
+                            "value": 2,
+                            "dayScore": 7
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120008",
+                            "date": 706326796.82492399,
+                            "value": 3,
+                            "dayScore": 3
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120009",
+                            "date": 706526796.82492697,
+                            "value": 4,
+                            "dayScore": 4
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120010",
+                            "date": 706626796.824929,
+                            "value": 1,
+                            "dayScore": 1
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120011",
+                            "date": 706726796.82492995,
+                            "value": 3,
+                            "dayScore": 6
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "62620570-f4dd-11ed-a05b-0242ac120004",
+                "prompt": "Did you commit code today?",
+                "toggleData": {
+                    "id": "62620570-f4dd-11ed-a05b-0242ac120005",
+                    "chartData": [
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120006",
+                            "date": 706126796.82486606,
+                            "value": true,
+                            "dayScore": 5
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120007",
+                            "date": 706226796.82492197,
+                            "value": true,
+                            "dayScore": 7
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120008",
+                            "date": 706326796.82492399,
+                            "value": false,
+                            "dayScore": 3
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120009",
+                            "date": 706526796.82492697,
+                            "value": true,
+                            "dayScore": 4
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120010",
+                            "date": 706626796.824929,
+                            "value": false,
+                            "dayScore": 1
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120011",
+                            "date": 706726796.82492995,
+                            "value": false,
+                            "dayScore": 6
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "id" : "f501dd72-f4de-11ed-a05b-0242ac120003",
+        "pageLabel" : "Gym",
+        "attributes": [
+            {
+                "id": "62620570-f4dd-11ed-a05b-0242ac120004",
+                "prompt": "Did you go to the gym today?",
+                "toggleData": {
+                    "id": "62620570-f4dd-11ed-a05b-0242ac120005",
+                    "chartData": [
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120006",
+                            "date": 706126796.82486606,
+                            "value": true,
+                            "dayScore": 5
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120007",
+                            "date": 706226796.82492197,
+                            "value": true,
+                            "dayScore": 7
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120008",
+                            "date": 706326796.82492399,
+                            "value": false,
+                            "dayScore": 3
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120009",
+                            "date": 706526796.82492697,
+                            "value": true,
+                            "dayScore": 4
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120010",
+                            "date": 706626796.824929,
+                            "value": false,
+                            "dayScore": 1
+                        },
+                        {
+                            "id": "62620570-f4dd-11ed-a05b-0242ac120011",
+                            "date": 706726796.82492995,
+                            "value": false,
+                            "dayScore": 6
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]
+

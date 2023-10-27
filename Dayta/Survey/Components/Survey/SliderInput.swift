@@ -39,7 +39,7 @@ struct SliderInput: View {
                     }
                 }
             }.scaledToFit()
-        }
+        }.frame(maxWidth: 200, maxHeight: 100)
     }
     
     func image(for number: Int) -> Image {
